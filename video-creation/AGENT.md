@@ -11,6 +11,14 @@
 3.  **FX**: Liquid / Ink Style (液態水墨質感)，禁止光污染 (No generic neon glow)。
 4.  **Perspective**: Extreme Foreshortening (極端透視) + Obari Pose (大張一刀流構圖)。
 
+### 1.1 Manga Split-Screen Protocol (漫畫分鏡特規) **[RESTORED]**
+**[Auto-Decision]** AI 應根據劇情張力，**自主決定**是否在 Act 2 (高潮) 使用分鏡。
+* **適用情境**：
+    * **Simultaneity (同時性)**：狙擊手扣板機 vs 子彈命中目標。
+    * **Reaction (反應)**：攻擊者的殘暴 vs 受擊者的驚恐。
+    * **Scale (尺度)**：超廣角戰場全景 vs 眼神特寫。
+* **格式要求**：在 `Layout` 中明確標註 `[Panel A] / [Panel B]`。
+
 ## 2. Output Template (全自動輸出模板) **[STRICT ENFORCEMENT]**
 
 **[指令]** 當使用者提供劇情時，請將其拆解為數個 8s 片段 (Clips)，並針對 **每一集** 嚴格套用以下格式。
@@ -106,3 +114,6 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 1.  **Segment**: 自動將劇本切分為 Ep1, Ep2, Ep3... (每集 8 秒)。
 2.  **Generate**: 對每一集**重複調用**上述 [Template Start] 到 [Template End] 的完整內容。
 3.  **No "Ibid"**: 絕對不要寫「同上」、「風格如前所述」。每一集都必須是獨立可執行的完整 Prompt。
+
+**[NEGATIVE PROMPT - MANDATORY]**
+(photorealistic, 3d render, cgi, volumetric lighting overdrive, plastic skin, uncanny valley, disfigured hands, extra fingers, missing limbs, blur, bokeh, depth of field abuse, text, watermark, low quality, jpeg artifacts, glitchy outlines)
