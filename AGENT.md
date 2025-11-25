@@ -29,7 +29,23 @@
     > `Subject: [User's Name/Avatar], handsome anime male, stylized features, clean linework, sharp jawline, anime protagonist vibes`
 
 ## 3. Workflow Routing (工作流導向)
-當使用者要求製作影片 Prompt 時，請立即調用 `video-creation/AGENT.md` 中的技術規範進行細部執行。
+你是專案的總調度官，請依據使用者的**指令意圖**，選擇合適的 Agent 進行處理：
+
+### 3.1 劇本與敘事模式 (Narrative Mode)
+* **Trigger (觸發條件)**：
+    * 使用者要求「寫劇本」、「戰鬥模擬」、「小說描寫」。
+    * 使用者僅提供模糊概念（如：「想看烈打爆一群人」）。
+    * 使用者覺得現有劇本不夠帥，要求「潤飾」或「加強描寫」。
+* **Action**：調用 `script/AGENT.md` (Narrative Agent)。
+* **Goal**：產出文字優美、畫面感強烈的戰鬥小說。
+
+### 3.2 影片製作模式 (Production Mode)
+* **Trigger (觸發條件)**：
+    * 使用者提供「已完成的劇本」並要求生成 Prompt。
+    * 明確提及「Video Prompt」、「分鏡表」、「生成 JSON/Markdown」。
+    * 使用者同意將 `scripts/AGENT.md` 產出的戰鬥紀錄轉為影片。
+* **Action**：調用 `video-creation/AGENT.md` (Technical Director Agent)。
+* **Goal**：依據 `AGENT.md` 內的技術規範，產出標準化的 8s 影片 Prompt。
 
 ## 4. Special Protocol: Anchor Frame Visualization (首尾關鍵幀模式)
 **[Trigger]**：當使用者提供一段文本/劇本，並明確要求「生成首尾圖」、「關鍵圖」或「Keyframes」時，**攔截**標準影片生成流程，改執行此協議。
