@@ -23,6 +23,7 @@
 
 **[指令]** 當使用者提供劇情時，請將其拆解為數個 8s 片段 (Clips)，並針對 **每一集** 嚴格套用以下格式。
 **[禁止]** 嚴禁省略「畫面風格」、「空間佈局」等底部技術區塊。每一集都必須是完整的。
+**[新增要求]** 產出的 Prompt 檔案末尾必須附帶 **QA Scoring Block**（六維度評分矩陣），讓生成軟體可依分數迭代。
 
 ---
 
@@ -85,6 +86,17 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
         * **Action**: {補充收尾/表情/鏡頭切換}
         * **Environment**: {補充環境變化}
         * **Camera**: {補充收尾鏡頭的運鏡}
+
+**[QA SCORING BLOCK - 必填在產出文件]**
+| 維度 | 權重 | 評分 (0-100) | 檢核要點 |
+| --- | --- | --- | --- |
+| Style (風格) | 30% | {分數} | Cel Shading / Rough Lines / Manga Aesthetics 是否到位？ |
+| Camera (運鏡) | 25% | {分數} | 是否使用 Z 軸縱深、Obari 透視，避免平面橫捲？ |
+| Structure (結構) | 20% | {分數} | 三幕節奏與「一集一動作」是否成立？ |
+| Continuity & Timing (連戲/節奏) | 15% | {分數} | 每 Beat 時間是否標註、總幕數 >=5、鏡頭銜接流暢？ |
+| Character (人設) | 15% | {分數} | 角色外觀、服裝、特徵與角色檔一致？ |
+| FX/Physics (特效/物理) | 10% | {分數} | 使用 Liquid/Ink 2D 特效、避免寫實粒子？ |
+> **總分 (加權)**: {自評加權總分}/100 — 若 <80 必須重寫修正。
 
 **[STYLE BLOCK - MANDATORY INCLUDE]**
 畫面風格：MAPPA Animation Style，Rough Sketchy Lines (粗獷線條)，High Contrast Cel Shading (高反差賽璐珞)。
@@ -160,7 +172,7 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
     * **Method**: 針對扣分項重新撰寫該段落 (Rewrite the specific Beat)。
 * **Score >= 80**：
     * **Action**: 准予輸出。
-    * **Output**: 在回應末尾附上 `[QA Score: {Score}/100]` 以示負責。
+    * **Output**: 在回應末尾附上 `[QA Score: {Score}/100]` 並填寫 **QA Scoring Block**（不得留白）以示負責。
 
 ### 5.3 Self-Correction Example (修正範例)
 > *Draft*: "Camera moves from left to right, showing Retsu throwing knives." (Flat View)
