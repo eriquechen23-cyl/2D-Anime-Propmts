@@ -77,8 +77,8 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 | --- | --- | --- | --- |
 | Style (風格) | 30% | {分數} | Cel Shading / Rough Lines / Manga Aesthetics 是否到位？ |
 | Camera (運鏡) | 25% | {分數} | 是否使用 Z 軸縱深、Obari 透視，避免平面橫捲？ |
-| Structure (結構) | 20% | {分數} | 三幕節奏是否成立？是否符合 Sakuga Density (6-8 Beats)？ |
-| Continuity & Timing (連戲/節奏) | 15% | {分數} | **是否拆解為微觀特寫？總幕數 >= 6？** |
+| Structure (結構) | 20% | {分數} | 三幕節奏是否成立？是否符合 Sakuga Density (7-10 Beats)？ |
+| Continuity & Timing (連戲/節奏) | 15% | {分數} | **是否拆解為微觀特寫？總幕數 >= 7？** |
 | Character (人設) | 15% | {分數} | 角色外觀、服裝、特徵與角色檔一致？ |
 | FX/Physics (特效/物理) | 10% | {分數} | 使用 Liquid/Ink 2D 特效、避免寫實粒子？ |
 > **總分 (加權)**: {自評加權總分}/100 — 若 <85 必須重寫修正。
@@ -116,8 +116,10 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 ## 3. Narrative & Pacing Logic (敘事邏輯)
 為了確保上述模板的品質，執行時請遵守：
 
-1.  **Sakuga Density Protocol (作畫張數極大化)** [UPDATED]:
-    * **Force High-Frequency (強制高頻)**：每 8 秒影片強制拆解為 **6-8 個 Beat (分鏡)**，禁止低密度長鏡頭。
+1.  **The 8-Second Rule & Editing Protocol (剪輯協議)** [UPDATED]:
+    * **No One-Shot Constraint (非一鏡到底)**：嚴禁為了連貫而犧牲節奏，鼓勵 Hard Cuts、Jump Cuts、Montage，拒絕物理上強求的連續運鏡。
+    * **Maximize Beat Density (BEAT 最大化)**：每 8 秒影片至少 7-10 幕，優先提高分鏡密度以堆疊資訊量。
+    * **Multi-Angle Coverage**：同一動作需嘗試「特寫 -> 廣角 -> 破壞細節 -> 反應」的快速切換，形成多角度節奏波動。
     * **Micro-Narrative (微觀敘事)**：必須將單一動作 (Action) 拆解為連續的微特寫 (Micro-cuts) 以營造速度感。
         * *Bad*: "Retsu jumps up." (1 Shot)
         * *Good*: "[Close-up] Foot crushes ground" -> "[Back View] Muscles tense" -> "[Low Angle] Motion blur launch" (3 Shots).
@@ -149,7 +151,7 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 | **1. Style (風格)** | **30%** | 必須包含 `Cel Shading`, `Rough Lines`, `Manga Aesthetics`。 | 出現 `Photorealistic` (-30分/重寫) |
 | **2. Camera (運鏡)** | **25%** | 具備 Z 軸縱深 (Foreshortening) 或 Obari Perspective。 | 平面視角 (-25分/重寫) |
 | **3. Structure (結構)** | **20%** | 遵守 `Act 1 -> Act 2 -> Act 3`。 | 結構混亂 (-10分) |
-| **4. Continuity & Timing (連戲/節奏)** | **15%** | **Sakuga Protocol**: 總幕數 (Beats) 必須在 **6-8 幕**之間。使用微特寫銜接。 | **節奏拖沓、幕數 < 6 (-15分/重寫)** |
+| **4. Continuity & Timing (連戲/節奏)** | **15%** | **Sakuga Protocol**: 總幕數 (Beats) 必須在 **7-10 幕**之間。使用微特寫銜接。 | **節奏拖沓、幕數 < 7 (-15分/重寫)** |
 | **5. Character (人設)** | **15%** | 角色特徵 (Glowing Lines/Outfit) 與 `character_profiles.md` 一致。 | 角色特徵錯誤 (-15分) |
 | **6. FX/Physics (物理)** | **10%** | 使用 `Liquid/Ink` 描述特效，而非寫實粒子。 | 描述過於物理真實 (-10分) |
 
