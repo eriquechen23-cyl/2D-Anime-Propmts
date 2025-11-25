@@ -12,13 +12,16 @@
 > **Core Principle**: "Allow strict 3D perspective geometry (vanishing points, foreshortening) but render it with strict 2D aesthetics (flat colors, outlines). The action must feel like it occupies a deep 3D space, not a 2D stage."
 
 1.  **[MUST] Line & Flat (線條與色塊)**
-    -   所有角色與前景物件必須有 **描邊 (Outlines)** (0.8px - 1.5px)。
+    -   所有角色與前景物件必須有 **描邊 (Outlines)**。
+    -   **Line Style**: 一般場景使用 `Clean Lines` (0.8px - 1.5px)；戰鬥/爆發時強制切換為 **`Rough Sketchy Lines`** 或 **`Variable Line Weight`** (模擬作畫力道/墨繪感)。
     -   上色強制使用 **色塊分層 (Base/Shadow/Highlight)**，禁止使用平滑漸層 (Gradient)。
 2.  **[MUST] Manga Expression (漫畫化演出)**
     -   在高潮 (Climax) 或衝擊 (Impact) 鏡頭，強制疊加 **網點 (Screen Tone)**、**速度線 (Speed Lines)** 與 **擬聲字 (Katakana SFX)**。
 3.  **[LIMIT] 3D FX Constraints (特效限制)**
     -   煙霧、火花、魔法光效必須經過 **Toon Shading** 處理。
-    -   **禁止**：真實體積光 (Volumetric Fog)、寫實景深 (Realistic Bokeh)、鏡頭髒汙 (Lens Dirt)。
+    -   **Energy Style**: 能量特效需具備 **「流體感 (Fluid/Liquid)」** 或 **「墨繪感 (Ink Brush)」** (Cursed Energy Style)，而非單純的光束。
+    -   **禁止**：寫實景深 (Realistic Bokeh)、鏡頭髒汙 (Lens Dirt)。
+    -   **允許**：`Volumetric Lighting` (體積光) 僅限於營造空氣塵埃感 (Floating Dust)，需保持動漫渲染質感。
 
 ## 2. 2D/3D Layering Standard (分層標註標準)
 在 `Angle` 的 `Materials & Physics` 欄位中，必須明確標註渲染層級：
@@ -55,7 +58,8 @@
     -   在快速動作（揮劍、轉頭）中，**禁止**使用寫實的動態模糊 (Motion Blur)。
     -   **必須**使用 `Smear frames`、`Elongated limbs` 或 `Multiple limbs` 來表現速度感。
 2.  **Impact Frames (衝擊幀)**：
-    -   在打擊點 (Hit stop) 插入 1-2 幀的 `Negative color (反白/負片)` 或 `Sketchy lines (粗糙線稿)`，強化打擊力度。
+    -   在打擊點 (Hit stop) 插入 1-2 幀的 `Negative color (反白/負片)` 或 `Sketchy lines (粗糙線稿)`。
+    -   **Black Flash Logic**: 模仿 JJK 黑閃，使用「黑白負片 + 紅色閃電 (Red Lightning Sparks)」強化空間扭曲感。
 3.  **Frame Modulation (張數控制)**：
     -   **日常演技**：模擬 `Animation on 3s` (8fps)，保留手繪的頓挫感。
     -   **高潮戰鬥**：模擬 `Sakuga (作畫崩壞/高流暢)`，線條可瞬間變繁複或極簡，強調流暢度。
@@ -81,19 +85,21 @@
     * `Blocking (走位)`：{入畫/停位/互動/道具接觸}
     * `Camera (運鏡技術)`：
         * 運鏡：{滑軌/側移/繞拍 (2D Parallax)/手持 (Shake)/穩定器/Z軸衝刺 (Push in/Pull out)}
+        * 風格：**`Park Sunghoo Style Camera Shake`** (手持混亂感), **`Hyper-dynamic Camera Work`**.
         * 構圖關鍵字：{Obari Pose (大張一刀流)/Dutch Angle (荷蘭式傾斜)/Action Lines converging (放射狀速度線)}
         * 焦段/機位：{廣角透視 (Fish-eye/Wide)/24–35/50–75/100–135mm｜眼高/胸高/膝高/俯拍}
         * 對焦：{全焦 (Deep Focus)/層次拉焦 (Rack Focus) - *動漫僅用模糊色塊表現散景*}
         * 快門角 (Shutter/Motion)：{180 (標準)/144–172 (動作)/200–240 (夢幻)}；拍點：{關鍵動作/視線交換}
-    * `光影`：{光型/色溫/對比/眼神光 (Eye Highlight)}
-    * `色調/LUT`：{膚色優先/陰影微藍/高光暖/去飽和%}
+    * `光影`：{Moody Low-key Lighting (低調光)/Volumetric Lighting (體積光)/Rim Light}
+    * `色調/LUT`：{Deep Blue/Purple Shadows (冷色陰影)/High Contrast/Dark Fantasy Mood}
     * `聲音`：旁錄 {環境/衣料/腳步/遠景人聲}；音樂 {BPM×運鏡速度 0.8–1.2}
     * `物理/質感 (Anime Adapted)`：
         * **嚴禁真實 PBR**，請執行以下轉譯：
         * PBR 粗糙度 → `Matte Painting (啞光手繪)`
         * 金屬度 → `High Contrast Highlight (高反差色塊)`
-        * 膚質分層 → `Cel Shade Skin (賽璐珞膚色) + Blush Lines (紅暈線)`
-        * 流體黏度 → `Toon Fluid (卡通流體)`
+        * 膚質分層 → `Defined Muscles with hard shadows` (強調肌肉立體感)
+        * 流體黏度 → `Cursed Energy Fluid` (咒力流體) / `Ink Brush Texture` (墨繪質感)
+        * 粒子 → `Floating Dust Particles` (懸浮微塵)
     * `轉場`：{直接切/光源匹配/鞭移/遮擋/羽化}
 
 ### [Level 3] Angle {a} (構圖規格)
