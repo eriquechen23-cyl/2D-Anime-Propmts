@@ -6,12 +6,12 @@
 - **Constraints**: 必須列出 "No Photorealism", "No 3D Gradients", "Flat Color"
 
 ```text
-Master({Duration}s｜2D Anime / Cel Shaded｜9:16｜24fps｜{Style_Primary})
+Master({Duration}s｜2D Anime / Cel Shaded｜16:9｜24fps｜{Style_Primary})
 「{時間/地點}；{環境氛圍 (Toon Render)}。
 主角：{角色名稱} ({User_Avatar_Description}，動漫化風格，帥氣男性)，穿著 {服裝}。
-動作：{動作描述}。
+動作 (Act & Beat)：{動作描述，請依照 Act 1 (Setup) -> Act 2 (Conflict) -> Act 3 (Climax) 結構撰寫，並標記 Beat}。
 畫面風格：日系 2D 動畫，{描邊粗細}px 輪廓線，高對比賽璐珞上色。
-鏡頭語言：{運鏡方式}，保留 2D 平面構成感，視差控制在 2-6px。
+鏡頭語言 (Angle & Continuity)：{運鏡序列描述，包含 Sequence Logic 與 Match Cut}，保留 2D 平面構成感...
 漫畫特效：{高潮段落} 疊加網點 (Screen Tone) 與速度線，擬聲字 "{Sound_FX}" 出現。
 光影設定：主光 {Color} 硬邊陰影 (Hard Shadow)，邊緣光 (Rim Light) {Color} 勾勒輪廓。
 作畫技術 (Animation Tech)：
@@ -21,3 +21,4 @@ Master({Duration}s｜2D Anime / Cel Shaded｜9:16｜24fps｜{Style_Primary})
 - 材質：{描述} (以色塊和高光形狀表現，非真實反射)
 - 流體/粒子：{描述} (以 2D Sprite 或 Toon 渲染表現)
 無字幕、無浮水印、無寫實質感。」
+```
