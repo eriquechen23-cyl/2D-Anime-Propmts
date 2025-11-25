@@ -43,60 +43,45 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 
 **Act 1 (0.0s - 3.0s): Setup / Anticipation (預備/蓄力)**
 * **Intent**: {本段落的戲劇目的}
-* **Beats (自由決定段數，整集至少 5 幕)**:
-    * **Beat 1**:
-        * **Duration**: {畫面時間範圍，如 0.0s-1.2s}
-        * **Action**: {角色的具體表演與移動}
-        * **Layout**: [Fore: {前景物件}] -> [Mid: {主角}] -> [Back: {背景/敵人}] (強調景深)
-        * **Camera**: {運鏡術語，如：Low Angle Dolly In, Orbit, Dutch Angle}
-        * **Lighting**: {該瞬間的光影變化}
-    * **Beat 1.x (Optional for extra shots)**:
-        * **Duration**: {補充鏡頭時間範圍，銜接前後段落}
-        * **Action**: {同場景內的補充鏡頭/反應鏡頭}
-        * **Layout**: {依需要補充的前中後景描述}
-        * **Camera**: {補充鏡頭的運鏡}
-        * **Lighting**: {補充鏡頭的光影}
+* **Beats (強制高頻：本區段建議 2-3 幕)**:
+    * **Beat 1.1**:
+        * **Duration**: {如 0.0s-1.0s}
+        * **Action**: {微觀動作描寫}
+        * **Layout**: [Fore: {前景}] -> [Mid: {中景}] -> [Back: {背景}]
+        * **Camera**: {運鏡術語}
+    * **Beat 1.2**: ...
+    * **Beat 1.3**: ...
 
 **Act 2 (3.0s - 6.0s): The Motion / Impact (衝突/核心動作)**
 * **Intent**: {本段落的視覺衝擊點}
-* **Beats (自由決定段數，整集至少 5 幕)**:
-    * **Beat 2**:
-        * **Duration**: {畫面時間範圍，如 3.0s-4.2s}
-        * **Action**: {關鍵攻擊/閃避/碰撞動作}
-        * **FX**: {特效描述，如：Black Flash, Speed Lines, Liquid Aura}
-        * **Camera**: {動態運鏡，如：Impact Zoom, Follow Cam, Shake}
-        * **Sound Visual**: {擬聲字描述，如：Floating Katakana "ドン！"}
-    * **Beat 2.x (Optional for extra shots)**:
-        * **Duration**: {補充鏡頭時間範圍，銜接前後段落}
-        * **Action**: {追加攻防/反應分鏡}
-        * **FX**: {補充特效}
-        * **Camera**: {補充鏡頭的運鏡}
-        * **Sound Visual**: {補充擬聲字/聲響視覺}
+* **Beats (強制高頻：本區段建議 3-4 幕)**:
+    * **Beat 2.1**:
+        * **Duration**: {如 3.0s-4.0s}
+        * **Action**: {關鍵攻擊/打擊特寫}
+        * **FX**: {2D 特效描述}
+        * **Camera**: {動態運鏡}
+    * **Beat 2.2**: ...
+    * **Beat 2.3**: ...
 
 **Act 3 (6.0s - 8.0s): Follow Through / Resolution (殘心/收尾)**
 * **Intent**: {動作結束後的餘韻或懸念}
-* **Beats (自由決定段數，整集至少 5 幕)**:
-    * **Beat 3**:
-        * **Duration**: {畫面時間範圍，如 6.0s-7.3s}
-        * **Action**: {落地/姿勢定格/回頭}
-        * **Environment**: {環境變化，如：煙霧擴散、碎石掉落}
-        * **Camera**: {收尾運鏡，如：Wide Static, Pull Back}
-    * **Beat 3.x (Optional for extra shots)**:
-        * **Duration**: {補充鏡頭時間範圍，銜接前後段落}
-        * **Action**: {補充收尾/表情/鏡頭切換}
-        * **Environment**: {補充環境變化}
-        * **Camera**: {補充收尾鏡頭的運鏡}
+* **Beats (強制高頻：本區段建議 1-2 幕)**:
+    * **Beat 3.1**:
+        * **Duration**: {如 6.0s-7.0s}
+        * **Action**: {落地/回頭/表情特寫}
+        * **Environment**: {環境變化}
+    * **Beat 3.2**: ...
 
 **[QA SCORING BLOCK - 必填在產出文件]**
 | 維度 | 權重 | 評分 (0-100) | 檢核要點 |
 | --- | --- | --- | --- |
 | Style (風格) | 30% | {分數} | Cel Shading / Rough Lines / Manga Aesthetics 是否到位？ |
 | Camera (運鏡) | 25% | {分數} | 是否使用 Z 軸縱深、Obari 透視，避免平面橫捲？ |
-| Structure (結構) | 20% | {分數} | 三幕節奏與「一集一動作」是否成立？ |
-| Continuity & Timing (連戲/節奏) | 15% | {分數} | 每 Beat 時間是否標註、總幕數 >=5、鏡頭銜接流暢？ |
+| Structure (結構) | 20% | {分數} | 三幕節奏是否成立？是否符合 Sakuga Density (6-8 Beats)？ |
+| Continuity & Timing (連戲/節奏) | 15% | {分數} | **是否拆解為微觀特寫？總幕數 >= 6？** |
 | Character (人設) | 15% | {分數} | 角色外觀、服裝、特徵與角色檔一致？ |
 | FX/Physics (特效/物理) | 10% | {分數} | 使用 Liquid/Ink 2D 特效、避免寫實粒子？ |
-> **總分 (加權)**: {自評加權總分}/100 — 若 <80 必須重寫修正。
+> **總分 (加權)**: {自評加權總分}/100 — 若 <85 必須重寫修正。
 
 **[STYLE BLOCK - MANDATORY INCLUDE]**
 畫面風格：MAPPA Animation Style，Rough Sketchy Lines (粗獷線條)，High Contrast Cel Shading (高反差賽璐珞)。
@@ -131,10 +116,12 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 ## 3. Narrative & Pacing Logic (敘事邏輯)
 為了確保上述模板的品質，執行時請遵守：
 
-1.  **The 8-Second Rule**:
-    * 嚴格遵守三幕結構 (0-3s, 3-6s, 6-8s)。
-    * **Minimum Shot Count**：每支 8 秒影片至少需要 5 幕分鏡，Agent 可自行增加分鏡數以維持節奏與張力。
-    * **一集一動作 (Single Motion Arc)**：若文案包含「主角閃避攻擊**並且**反擊擊殺」，請強制拆分為兩集 (Ep1: 閃避, Ep2: 反擊)。
+1.  **Sakuga Density Protocol (作畫張數極大化)** [UPDATED]:
+    * **Force High-Frequency (強制高頻)**：每 8 秒影片強制拆解為 **6-8 個 Beat (分鏡)**，禁止低密度長鏡頭。
+    * **Micro-Narrative (微觀敘事)**：必須將單一動作 (Action) 拆解為連續的微特寫 (Micro-cuts) 以營造速度感。
+        * *Bad*: "Retsu jumps up." (1 Shot)
+        * *Good*: "[Close-up] Foot crushes ground" -> "[Back View] Muscles tense" -> "[Low Angle] Motion blur launch" (3 Shots).
+    * **No Long Takes**: 嚴禁使用超過 2 秒的靜止或單一運鏡長鏡頭，除非為了特殊的張力暫停 (Tension Pause)。
 
 2.  **Visual Consistency**:
     * **Damage Retention**: 衣服破了就是破了，下一集必須繼承。
@@ -159,25 +146,20 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 
 | 維度 (Dimension) | 權重 | 通過標準 (Pass Criteria) | 扣分項 (Penalty) |
 | :--- | :--- | :--- | :--- |
-| **1. Style (風格)** | **30%** | 必須包含 `Cel Shading`, `Rough Lines`, `Manga Aesthetics`。 | 出現 `Photorealistic`, `Octane Render`, `Unreal Engine` (-30分/重寫) |
-| **2. Camera (運鏡)** | **25%** | 具備 Z 軸縱深 (Foreshortening) 或 Obari Perspective。 | 類似「橫向卷軸 (Side-scroller)」的平面視角 (-25分/重寫) |
-| **3. Structure (結構)** | **20%** | 嚴格遵守 `Act 1 (Setup) -> Act 2 (Conflict) -> Act 3 (Climax)`，並符合 **「一集一動作」** 原則（不為單一動作過度拆分多集）。 | 缺少 Act 或 Beat 定義不清 (-10分)；**過度分集 / 把同一動作拆成多集 (-15分，需重寫或合併劇段)** |
-| **4. Continuity & Timing (連戲/節奏)** | **15%** | 每幕列出明確時間範圍，整集 >=5 幕且節奏連貫，鏡頭語言符合景深/Z 軸運鏡。 | 未填寫時間、鏡頭平面化、鏡頭銜接突兀 (-15分) |
-| **5. Character (人設)** | **15%** | 角色特徵 (Glowing Lines/Outfit) 與 `character_profiles.md` 一致。 | 角色特徵錯誤或混亂 (-15分) |
-| **6. FX/Physics (物理)** | **10%** | 使用 `Liquid/Ink` 描述特效，而非寫實粒子。 | 描述過於物理真實 (Physically correct) (-10分) |
+| **1. Style (風格)** | **30%** | 必須包含 `Cel Shading`, `Rough Lines`, `Manga Aesthetics`。 | 出現 `Photorealistic` (-30分/重寫) |
+| **2. Camera (運鏡)** | **25%** | 具備 Z 軸縱深 (Foreshortening) 或 Obari Perspective。 | 平面視角 (-25分/重寫) |
+| **3. Structure (結構)** | **20%** | 遵守 `Act 1 -> Act 2 -> Act 3`。 | 結構混亂 (-10分) |
+| **4. Continuity & Timing (連戲/節奏)** | **15%** | **Sakuga Protocol**: 總幕數 (Beats) 必須在 **6-8 幕**之間。使用微特寫銜接。 | **節奏拖沓、幕數 < 6 (-15分/重寫)** |
+| **5. Character (人設)** | **15%** | 角色特徵 (Glowing Lines/Outfit) 與 `character_profiles.md` 一致。 | 角色特徵錯誤 (-15分) |
+| **6. FX/Physics (物理)** | **10%** | 使用 `Liquid/Ink` 描述特效，而非寫實粒子。 | 描述過於物理真實 (-10分) |
 
 ### 5.2 The Iteration Logic (迭代邏輯)
-* **Score < 80** 或 **觸發 Critical Penalty**：
+* **Score < 85** 或 **觸發 Critical Penalty**：
     * **Action**: 必須在輸出前進行「自我修正 (Self-Correction)」。
-    * **Method**: 針對扣分項重新撰寫該段落 (Rewrite the specific Beat)。
-* **Score >= 80**：
+    * **Method**: 針對扣分項重新撰寫該段落，**增加分鏡數 (Add more beats)**。
+* **Score >= 85**：
     * **Action**: 准予輸出。
-    * **Output**: 在回應末尾附上 `[QA Score: {Score}/100]` 並填寫 **QA Scoring Block**（不得留白）以示負責。
-
-### 5.3 Self-Correction Example (修正範例)
-> *Draft*: "Camera moves from left to right, showing Retsu throwing knives." (Flat View)
-> *Critique*: "Failed Camera Check. Side-scroller detected."
-> *Fix*: "Camera follows Retsu from behind (TPS), then swings to a dynamic low angle as he throws."
+    * **Output**: 在回應末尾附上 `[QA Score: {Score}/100]` 並填寫 **QA Scoring Block**。
 
 **[NEGATIVE PROMPT - MANDATORY]**
-(photorealistic, 3d render, cgi, volumetric lighting overdrive, plastic skin, uncanny valley, disfigured hands, extra fingers, missing limbs, blur, bokeh, depth of field abuse, text, watermark, low quality, jpeg artifacts, glitchy outlines)
+(photorealistic, 3d render, cgi, volumetric lighting overdrive, plastic skin, uncanny valley, disfigured hands, extra fingers, missing limbs, blur, bokeh, depth of field abuse, text, watermark, low quality, jpeg artifacts, glitchy outlines, long static shots)
