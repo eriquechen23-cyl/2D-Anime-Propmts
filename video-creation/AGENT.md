@@ -95,3 +95,78 @@
     * `構圖`：{三分線/中央/Z軸縱深/引導線}
     * `內容`：{特寫/越肩/敵人主觀/腳部特寫}
     * `安全`：{去Logo/去可讀字}
+
+## 7. Sequential Flow Protocol (State Machine / 狀態機協議)
+**[Context]** 此協議用於製作長度超過 8s 的連續短片 (16s/24s)，確保 Ep(N) 與 Ep(N-1) 之間的劇情與視覺連貫性。
+
+### 7.1 The State Block (狀態區塊)
+在生成下一集 Prompt 前，必須先定義上一集的「結束狀態」。
+Prompt 頂部必須包含以下 Context Block：
+
+> **[Previous State: Ep {N-1}]**
+> * **Ending Time**: {T-End of prev clip} (e.g., 00:08)
+> * **Last Scene**: {描述最後一幀的畫面，如：Hayato 站在冰霧中，槍口冒煙，敵人已粉碎}
+> * **Camera Vector**: {最後運鏡方向，如：Push-in close up}
+> * **Environment**: {場景破壞程度，如：地面結冰，鋼梁斷裂}
+
+### 7.2 Transition Logic (轉場邏輯)
+依據使用者的敘事需求，選擇一種轉場模式寫入 `Act 1`：
+
+| 模式 (Mode) | 邏輯 (Logic) | 適用情境 | Prompt 寫法 |
+| :--- | :--- | :--- | :--- |
+| **A. Direct Cut (直接硬切)** | 時間連續，空間跳躍 | 換視角、換對手 | `Start exactly at {Last Time}. Cut to [New Angle]. Environment remains damaged.` |
+| **B. Continuous (連續運鏡)** | 時間連續，空間連續 | 動作未完、長鏡頭 | `Match Cut from previous frame. Camera continues the movement.` |
+| **C. Time Skip (時間跳躍)** | 時間不連續 | 戰鬥結束、場景轉換 | `Fade in / Hard Cut to later time. Smoke has cleared.` |
+
+### 7.3 Continuity Constraints (連貫性限制)
+1.  **Damage Persistence (戰損繼承)**：角色身上的傷口、衣服破損、消耗的彈藥/能量槽，必須繼承上一集的狀態。
+2.  **Lighting Lock (光影鎖定)**：除非發生爆炸或時間流逝，否則環境光源 (Key Light direction/Color) 必須與上一集保持一致。
+3.  **No Regeneration (禁止再生)**：已被破壞的背景物件 (如斷掉的柱子) 不可突然復原。
+
+### 7.4 Workflow Integration
+當使用者要求「續寫」或「下一集」時：
+1.  **Analysis**: 分析上一集 (Ep N-1) 的最後一幀或 Prompt 結尾。
+2.  **State Definition**: 填寫 `[Previous State]`。
+3.  **Generation**: 產出 Ep N 的 Prompt，起始時間設為 `0.0s` (對應影片的 00:00)，但敘事時間承接上一集。
+
+## 8. Batch Script Processing (文案自動拆解工作流)
+**[Context]** 當使用者提供一段完整的劇情文案 (Script/Story) 並要求生成多集影片時，執行此協議。
+
+### 8.1 Segmentation Algorithm (拆分演算法)
+請依照以下邏輯將文案拆解為數個 `Video Prompt`：
+1.  **Pacing Analysis (節奏分析)**：
+    * **High Speed Action (戰鬥/快速)**：每 3-4 個動作指令 = 8秒 (1個 Clip)。
+    * **Slow Burn (氛圍/對話)**：每 1-2 個描寫指令 = 8秒 (1個 Clip)。
+2.  **Cut Point Detection (切割點判定)**：
+    * 在「場景轉換」、「視角大幅切換」或「強烈衝擊 (Impact)」之後進行切割。
+    * 確保每個 Clip 都有明確的 Act 1 (Setup) -> Act 3 (Climax/Cliffhanger)。
+
+### 8.2 Sequential Generation Output (批量輸出格式)
+分析完畢後，請一次性輸出多個 Code Block，並自動維護狀態鏈 (State Chain)。
+
+**輸出範本：**
+> **Planning Phase**:
+> * **Total Clips**: Estimated {N} clips.
+> * **Breakdown**:
+>     * Ep{i}: {劇情摘要} (0s-8s)
+>     * Ep{j}: {劇情摘要} (8s-16s)
+>
+> ---
+>
+> **[File: .../ep{i}_prompt.md]**
+> ```markdown
+> # Video Prompt: {Slug} (Part {i})
+> **[State: Start]**
+> Master(8s...)
+> ```
+>
+> **[File: .../ep{j}_prompt.md]**
+> ```markdown
+> # Video Prompt: {Slug} (Part {j})
+> **[State: Contiued from Ep{i}]**
+> * **Last Scene**: {Ep{i} End State}
+> Master(8s...)
+> ```
+
+### 8.3 Auto-Correction (自動修正)
+* 若文案中動作過於密集（例如：一句話包含「他跳起來、空中轉身、開槍、落地、再衝刺」），**強制拆分**為兩個 Prompt，不要硬塞進 8秒內。
