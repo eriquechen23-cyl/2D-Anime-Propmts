@@ -125,7 +125,7 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 | :--- | :--- | :--- | :--- |
 | **1. Style (風格)** | **30%** | 必須包含 `Cel Shading`, `Rough Lines`, `Manga Aesthetics`。 | 出現 `Photorealistic`, `Octane Render`, `Unreal Engine` (-30分/重寫) |
 | **2. Camera (運鏡)** | **25%** | 具備 Z 軸縱深 (Foreshortening) 或 Obari Perspective。 | 類似「橫向卷軸 (Side-scroller)」的平面視角 (-25分/重寫) |
-| **3. Structure (結構)** | **20%** | 嚴格遵守 `Act 1 (Setup) -> Act 2 (Conflict) -> Act 3 (Climax)`。 | 缺少 Act 或 Beat 定義不清 (-10分) |
+| **3. Structure (結構)** | **20%** | 嚴格遵守 `Act 1 (Setup) -> Act 2 (Conflict) -> Act 3 (Climax)`，並符合 **「一集一動作」** 原則（不為單一動作過度拆分多集）。 | 缺少 Act 或 Beat 定義不清 (-10分)；**過度分集 / 把同一動作拆成多集 (-15分，需重寫或合併劇段)** |
 | **4. Character (人設)** | **15%** | 角色特徵 (Glowing Lines/Outfit) 與 `character_profiles.md` 一致。 | 角色特徵錯誤或混亂 (-15分) |
 | **5. FX/Physics (物理)** | **10%** | 使用 `Liquid/Ink` 描述特效，而非寫實粒子。 | 描述過於物理真實 (Physically correct) (-10分) |
 
