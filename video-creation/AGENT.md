@@ -16,7 +16,9 @@
     -   **Line Style**: 一般場景使用 `Clean Lines` (0.8px - 1.5px)；戰鬥/爆發時強制切換為 **`Rough Sketchy Lines`** 或 **`Variable Line Weight`** (模擬作畫力道/墨繪感)。
     -   上色強制使用 **色塊分層 (Base/Shadow/Highlight)**，禁止使用平滑漸層 (Gradient)。
 2.  **[MUST] Manga Expression (漫畫化演出)**
-    -   在高潮 (Climax) 或衝擊 (Impact) 鏡頭，強制疊加 **網點 (Screen Tone)**、**速度線 (Speed Lines)** 與 **擬聲字 (Katakana SFX)**。
+    -   **Split-Screen (Koma-wari)**: 在對峙或鎖定時，使用 **`Split Screen Composition`** 同時呈現特寫與全景 (e.g., Eye Close-up vs TPS View)，打破單一視角。
+    -   **Impact Freeze**: 在打擊瞬間 (Hit Frame)，強制轉為 **`Monochrome Screen Tone`** (黑白網點) 並定格 0.2s，製造時間暫停感。
+    -   **Visualized SFX**: 擬聲字 (Katakana) 必須是 **`Floating in 3D space`**，具備體積感，能被煙霧遮擋或被衝擊波震動。
 3.  **[LIMIT] 3D FX Constraints (特效限制)**
     -   煙霧、火花、魔法光效必須經過 **Toon Shading** 處理。
     -   **Energy Style**: 能量特效需具備 **「流體感 (Fluid/Liquid)」** 或 **「墨繪感 (Ink Brush)」** (Cursed Energy Style)，而非單純的光束。
