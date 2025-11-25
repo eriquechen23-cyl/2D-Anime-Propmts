@@ -44,11 +44,13 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 * **Intent**: {本段落的戲劇目的}
 * **Beats (自由決定段數，整集至少 5 幕)**:
     * **Beat 1**:
+        * **Duration**: {畫面時間範圍，如 0.0s-1.2s}
         * **Action**: {角色的具體表演與移動}
         * **Layout**: [Fore: {前景物件}] -> [Mid: {主角}] -> [Back: {背景/敵人}] (強調景深)
         * **Camera**: {運鏡術語，如：Low Angle Dolly In, Orbit, Dutch Angle}
         * **Lighting**: {該瞬間的光影變化}
     * **Beat 1.x (Optional for extra shots)**:
+        * **Duration**: {補充鏡頭時間範圍，銜接前後段落}
         * **Action**: {同場景內的補充鏡頭/反應鏡頭}
         * **Layout**: {依需要補充的前中後景描述}
         * **Camera**: {補充鏡頭的運鏡}
@@ -58,11 +60,13 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 * **Intent**: {本段落的視覺衝擊點}
 * **Beats (自由決定段數，整集至少 5 幕)**:
     * **Beat 2**:
+        * **Duration**: {畫面時間範圍，如 3.0s-4.2s}
         * **Action**: {關鍵攻擊/閃避/碰撞動作}
         * **FX**: {特效描述，如：Black Flash, Speed Lines, Liquid Aura}
         * **Camera**: {動態運鏡，如：Impact Zoom, Follow Cam, Shake}
         * **Sound Visual**: {擬聲字描述，如：Floating Katakana "ドン！"}
     * **Beat 2.x (Optional for extra shots)**:
+        * **Duration**: {補充鏡頭時間範圍，銜接前後段落}
         * **Action**: {追加攻防/反應分鏡}
         * **FX**: {補充特效}
         * **Camera**: {補充鏡頭的運鏡}
@@ -72,10 +76,12 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 * **Intent**: {動作結束後的餘韻或懸念}
 * **Beats (自由決定段數，整集至少 5 幕)**:
     * **Beat 3**:
+        * **Duration**: {畫面時間範圍，如 6.0s-7.3s}
         * **Action**: {落地/姿勢定格/回頭}
         * **Environment**: {環境變化，如：煙霧擴散、碎石掉落}
         * **Camera**: {收尾運鏡，如：Wide Static, Pull Back}
     * **Beat 3.x (Optional for extra shots)**:
+        * **Duration**: {補充鏡頭時間範圍，銜接前後段落}
         * **Action**: {補充收尾/表情/鏡頭切換}
         * **Environment**: {補充環境變化}
         * **Camera**: {補充收尾鏡頭的運鏡}
@@ -137,15 +143,16 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 **[Context]** 為確保產出品質，Agent 在輸出最終 Prompt 前，必須執行以下「評分迴圈 (Scoring Loop)」。
 
 ### 5.1 The Scoring Matrix (評分矩陣)
-請在內心對生成的草稿進行以下 5 個維度的檢核（滿分 100）：
+請在內心對生成的草稿進行以下 6 個維度的檢核（滿分 100）：
 
 | 維度 (Dimension) | 權重 | 通過標準 (Pass Criteria) | 扣分項 (Penalty) |
 | :--- | :--- | :--- | :--- |
 | **1. Style (風格)** | **30%** | 必須包含 `Cel Shading`, `Rough Lines`, `Manga Aesthetics`。 | 出現 `Photorealistic`, `Octane Render`, `Unreal Engine` (-30分/重寫) |
 | **2. Camera (運鏡)** | **25%** | 具備 Z 軸縱深 (Foreshortening) 或 Obari Perspective。 | 類似「橫向卷軸 (Side-scroller)」的平面視角 (-25分/重寫) |
 | **3. Structure (結構)** | **20%** | 嚴格遵守 `Act 1 (Setup) -> Act 2 (Conflict) -> Act 3 (Climax)`，並符合 **「一集一動作」** 原則（不為單一動作過度拆分多集）。 | 缺少 Act 或 Beat 定義不清 (-10分)；**過度分集 / 把同一動作拆成多集 (-15分，需重寫或合併劇段)** |
-| **4. Character (人設)** | **15%** | 角色特徵 (Glowing Lines/Outfit) 與 `character_profiles.md` 一致。 | 角色特徵錯誤或混亂 (-15分) |
-| **5. FX/Physics (物理)** | **10%** | 使用 `Liquid/Ink` 描述特效，而非寫實粒子。 | 描述過於物理真實 (Physically correct) (-10分) |
+| **4. Continuity & Timing (連戲/節奏)** | **15%** | 每幕列出明確時間範圍，整集 >=5 幕且節奏連貫，鏡頭語言符合景深/Z 軸運鏡。 | 未填寫時間、鏡頭平面化、鏡頭銜接突兀 (-15分) |
+| **5. Character (人設)** | **15%** | 角色特徵 (Glowing Lines/Outfit) 與 `character_profiles.md` 一致。 | 角色特徵錯誤或混亂 (-15分) |
+| **6. FX/Physics (物理)** | **10%** | 使用 `Liquid/Ink` 描述特效，而非寫實粒子。 | 描述過於物理真實 (Physically correct) (-10分) |
 
 ### 5.2 The Iteration Logic (迭代邏輯)
 * **Score < 80** 或 **觸發 Critical Penalty**：
