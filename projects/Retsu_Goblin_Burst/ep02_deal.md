@@ -1,47 +1,39 @@
-# Video Prompt: Retsu_Goblin_Burst (Ep02)
+# Video Prompt: Crimson Delay (Part 2 - Saturation)
 
-**[State: Previous - Ep01]**
-*   **Ending Time**: 00:08
-*   **Last Scene**: Card flying at Goblin.
-*   **Camera**: POV Impact.
+**[Previous State: Ep01 End]**
+* **Ending Time**: 00:08
+* **Last Scene**: Goblins charging with glowing red knives stuck in them.
+* **Camera Vector**: Low Angle.
 
 Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantasy Action)
-「承接上集；廢棄地下鐵站。
-主角：**Kanzawa Retsu**。敵人：**Armored Goblin**。
+「Dungeon Battle; Chaos.
+主角：Kanzawa Retsu.
+敵人：Goblins (Multiple marked with Red Veins).
 動作 (Act & Beat)：
+Act 1 (0.0-4.0s) [Action: Evasion & Tag]
+意圖：烈在包圍網中遊走，增加標記數量。
+- Beat 1 (0.0-4.0s): The Dance.
+    - Layout: [Fore: Goblin Claw swipe] -> [Mid: Retsu Dodging] -> [Back: More Goblins].
+    - Action: Retsu weaves through attacks with a smirk. He sticks a **Red Card** onto a Goblin's forehead while passing by.
+    - Camera: **Obari Perspective** (Dynamic 3/4 View). High speed tracking.
 
-**Act 1 (0.0s - 3.0s): Setup / Anticipation**
-*   **Intent**: 敵人反擊與危機感。
-*   **Beat 1 (0-1.5s)**:
-    *   **Action**: 哥布林揮舞巨大的生鏽鐵管 (Rusty Pipe)，將飛來的卡牌打飛 (Deflect)。火花四濺。
-    *   **Camera**: Side view impact shot.
-    *   **FX**: Sparks explosion.
-*   **Beat 2 (1.5-3.0s)**:
-    *   **Action**: 哥布林藉著揮擊的慣性，向 Retsu 猛撲過來 (Lunge)，鐵管砸向地面。
-    *   **Camera**: Low angle looking up at Goblin.
+Act 2 (4.0-6.0s) [Focus: Overload]
+意圖：展示「起爆準備完成」的信號。
+- Beat 1 (4.0-6.0s): Critical Mass.
+    - Layout: [Fore: Glowing Red Veins] -> [Mid: Goblin Crowd] -> [Back: Retsu creating distance].
+    - Action: Retsu backflips to gain distance. The red lines on all 10+ Goblins start to pulse rapidly (High frequency blinking).
+    - FX: "Beep... Beep... Beep..." (Visualized Sound Waves).
 
-**Act 2 (3.0s - 6.0s): The Motion / Impact**
-*   **Intent**: 極限閃避的帥氣瞬間。
-*   **Beat 3 (3.0-6.0s)**:
-    *   **Action**: Retsu 進行 **Matrix Dodge** (向後下腰)。鐵管擦著他的鼻尖砸在地面，碎石飛濺。
-    *   **Camera**: Slow Motion (Bullet Time) rotating around Retsu.
-    *   **Layout**: [Fore: Pipe smashing ground] -> [Mid: Retsu bending back] -> [Back: Sparks].
-    *   **Lighting**: 鐵管擊中地面的火花瞬間照亮 Retsu 的臉。
+Act 3 (6.0-8.0s) [Setup: The Trigger Stance]
+意圖：帥氣的起爆前搖。
+- Beat 1 (6.0-8.0s): The Smirk.
+    - Layout: [Fore: Retsu's Hand] -> [Mid: Retsu's Face] -> [Back: Blurred Goblins].
+    - Action: Close up on Retsu. He raises his hand, preparing to snap his fingers. He smirks: "Baka (Idiots)."
+    - Camera: Extreme Close Up (Side Profile). Focus on the fingers.
 
-**Act 3 (6.0s - 8.0s): Follow Through / Resolution**
-*   **Intent**: 重整態勢，準備反擊。
-*   **Beat 4 (6.0-8.0s)**:
-    *   **Action**: Retsu 單手撐地，利用反作用力向後滑行 (Back Slide)，拉開距離。
-    *   **Camera**: Tracking shot following Retsu sliding back.
-    *   **Layout**: [Fore: Ground debris] -> [Mid: Retsu sliding] -> [Back: Goblin recovering].
-」
-
----
-
-## Visual Anchors (Runway/Luma)
-
-### 1. Head Frame (0.0s)
-> **Prompt**: Anime style screenshot, Armored Goblin swinging a rusty pipe, deflecting a red glowing card, sparks flying, aggressive pose, dark subway tunnel, action shot.
-
-### 2. Tail Frame (8.0s)
-> **Prompt**: Anime style screenshot, Kanzawa Retsu sliding backwards on the ground, one hand touching the floor, dust rising, looking forward intensely, distance created between him and the enemy, dynamic perspective.
+畫面風格：MAPPA Animation Style，Cel Shading。
+漫畫特效：
+- **Screen Tone**: Halftone overlay on shadows.
+- **SFX**: "ピピッ (Pipi...)" (Electronic warning sound text).
+光影設定：Red rim light on Retsu's face from the glowing enemies.
+無字幕、無浮水印、無寫實質感。」

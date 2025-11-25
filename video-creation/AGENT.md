@@ -115,5 +115,32 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 2.  **Generate**: 對每一集**重複調用**上述 [Template Start] 到 [Template End] 的完整內容。
 3.  **No "Ibid"**: 絕對不要寫「同上」、「風格如前所述」。每一集都必須是獨立可執行的完整 Prompt。
 
+## 5. Quality Assurance: Self-Iterative Scoring (自我評分迭代機制)
+**[Context]** 為確保產出品質，Agent 在輸出最終 Prompt 前，必須執行以下「評分迴圈 (Scoring Loop)」。
+
+### 5.1 The Scoring Matrix (評分矩陣)
+請在內心對生成的草稿進行以下 5 個維度的檢核（滿分 100）：
+
+| 維度 (Dimension) | 權重 | 通過標準 (Pass Criteria) | 扣分項 (Penalty) |
+| :--- | :--- | :--- | :--- |
+| **1. Style (風格)** | **30%** | 必須包含 `Cel Shading`, `Rough Lines`, `Manga Aesthetics`。 | 出現 `Photorealistic`, `Octane Render`, `Unreal Engine` (-30分/重寫) |
+| **2. Camera (運鏡)** | **25%** | 具備 Z 軸縱深 (Foreshortening) 或 Obari Perspective。 | 類似「橫向卷軸 (Side-scroller)」的平面視角 (-25分/重寫) |
+| **3. Structure (結構)** | **20%** | 嚴格遵守 `Act 1 (Setup) -> Act 2 (Conflict) -> Act 3 (Climax)`。 | 缺少 Act 或 Beat 定義不清 (-10分) |
+| **4. Character (人設)** | **15%** | 角色特徵 (Glowing Lines/Outfit) 與 `character_profiles.md` 一致。 | 角色特徵錯誤或混亂 (-15分) |
+| **5. FX/Physics (物理)** | **10%** | 使用 `Liquid/Ink` 描述特效，而非寫實粒子。 | 描述過於物理真實 (Physically correct) (-10分) |
+
+### 5.2 The Iteration Logic (迭代邏輯)
+* **Score < 80** 或 **觸發 Critical Penalty**：
+    * **Action**: 必須在輸出前進行「自我修正 (Self-Correction)」。
+    * **Method**: 針對扣分項重新撰寫該段落 (Rewrite the specific Beat)。
+* **Score >= 80**：
+    * **Action**: 准予輸出。
+    * **Output**: 在回應末尾附上 `[QA Score: {Score}/100]` 以示負責。
+
+### 5.3 Self-Correction Example (修正範例)
+> *Draft*: "Camera moves from left to right, showing Retsu throwing knives." (Flat View)
+> *Critique*: "Failed Camera Check. Side-scroller detected."
+> *Fix*: "Camera follows Retsu from behind (TPS), then swings to a dynamic low angle as he throws."
+
 **[NEGATIVE PROMPT - MANDATORY]**
 (photorealistic, 3d render, cgi, volumetric lighting overdrive, plastic skin, uncanny valley, disfigured hands, extra fingers, missing limbs, blur, bokeh, depth of field abuse, text, watermark, low quality, jpeg artifacts, glitchy outlines)
