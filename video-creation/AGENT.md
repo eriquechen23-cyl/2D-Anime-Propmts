@@ -42,26 +42,43 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 
 **Act 1 (0.0s - 3.0s): Setup / Anticipation (預備/蓄力)**
 * **Intent**: {本段落的戲劇目的}
-* **Beat 1**:
-    * **Action**: {角色的具體表演與移動}
-    * **Layout**: [Fore: {前景物件}] -> [Mid: {主角}] -> [Back: {背景/敵人}] (強調景深)
-    * **Camera**: {運鏡術語，如：Low Angle Dolly In, Orbit, Dutch Angle}
-    * **Lighting**: {該瞬間的光影變化}
+* **Beats (自由決定段數，整集至少 5 幕)**:
+    * **Beat 1**:
+        * **Action**: {角色的具體表演與移動}
+        * **Layout**: [Fore: {前景物件}] -> [Mid: {主角}] -> [Back: {背景/敵人}] (強調景深)
+        * **Camera**: {運鏡術語，如：Low Angle Dolly In, Orbit, Dutch Angle}
+        * **Lighting**: {該瞬間的光影變化}
+    * **Beat 1.x (Optional for extra shots)**:
+        * **Action**: {同場景內的補充鏡頭/反應鏡頭}
+        * **Layout**: {依需要補充的前中後景描述}
+        * **Camera**: {補充鏡頭的運鏡}
+        * **Lighting**: {補充鏡頭的光影}
 
 **Act 2 (3.0s - 6.0s): The Motion / Impact (衝突/核心動作)**
 * **Intent**: {本段落的視覺衝擊點}
-* **Beat 2**:
-    * **Action**: {關鍵攻擊/閃避/碰撞動作}
-    * **FX**: {特效描述，如：Black Flash, Speed Lines, Liquid Aura}
-    * **Camera**: {動態運鏡，如：Impact Zoom, Follow Cam, Shake}
-    * **Sound Visual**: {擬聲字描述，如：Floating Katakana "ドン！"}
+* **Beats (自由決定段數，整集至少 5 幕)**:
+    * **Beat 2**:
+        * **Action**: {關鍵攻擊/閃避/碰撞動作}
+        * **FX**: {特效描述，如：Black Flash, Speed Lines, Liquid Aura}
+        * **Camera**: {動態運鏡，如：Impact Zoom, Follow Cam, Shake}
+        * **Sound Visual**: {擬聲字描述，如：Floating Katakana "ドン！"}
+    * **Beat 2.x (Optional for extra shots)**:
+        * **Action**: {追加攻防/反應分鏡}
+        * **FX**: {補充特效}
+        * **Camera**: {補充鏡頭的運鏡}
+        * **Sound Visual**: {補充擬聲字/聲響視覺}
 
 **Act 3 (6.0s - 8.0s): Follow Through / Resolution (殘心/收尾)**
 * **Intent**: {動作結束後的餘韻或懸念}
-* **Beat 3**:
-    * **Action**: {落地/姿勢定格/回頭}
-    * **Environment**: {環境變化，如：煙霧擴散、碎石掉落}
-    * **Camera**: {收尾運鏡，如：Wide Static, Pull Back}
+* **Beats (自由決定段數，整集至少 5 幕)**:
+    * **Beat 3**:
+        * **Action**: {落地/姿勢定格/回頭}
+        * **Environment**: {環境變化，如：煙霧擴散、碎石掉落}
+        * **Camera**: {收尾運鏡，如：Wide Static, Pull Back}
+    * **Beat 3.x (Optional for extra shots)**:
+        * **Action**: {補充收尾/表情/鏡頭切換}
+        * **Environment**: {補充環境變化}
+        * **Camera**: {補充收尾鏡頭的運鏡}
 
 **[STYLE BLOCK - MANDATORY INCLUDE]**
 畫面風格：MAPPA Animation Style，Rough Sketchy Lines (粗獷線條)，High Contrast Cel Shading (高反差賽璐珞)。
@@ -98,6 +115,7 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 
 1.  **The 8-Second Rule**:
     * 嚴格遵守三幕結構 (0-3s, 3-6s, 6-8s)。
+    * **Minimum Shot Count**：每支 8 秒影片至少需要 5 幕分鏡，Agent 可自行增加分鏡數以維持節奏與張力。
     * **一集一動作 (Single Motion Arc)**：若文案包含「主角閃避攻擊**並且**反擊擊殺」，請強制拆分為兩集 (Ep1: 閃避, Ep2: 反擊)。
 
 2.  **Visual Consistency**:
