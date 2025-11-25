@@ -36,7 +36,7 @@
 * **Last Scene**: {上一集的結尾畫面 (Tail Frame) 描述}
 * **Context**: {本集劇情摘要}
 
-Master(15s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantasy Action)
+Master(15s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜9:16｜24fps｜Dark Fantasy Action)
 「{時間}，{地點}；{環境氛圍描述 (如：Dusty, Sparks flying, Tense)}。
 主角：**{角色名}** ({外觀特徵 keyword}, Anime Style)，穿著 {服裝}。
 動作 (Act & Beat)：
