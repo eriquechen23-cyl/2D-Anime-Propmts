@@ -45,7 +45,7 @@
     * 明確提及「Video Prompt」、「分鏡表」、「生成 JSON/Markdown」。
     * 使用者同意將 `scripts/AGENT.md` 產出的戰鬥紀錄轉為影片。
 * **Action**：調用 `video-creation/AGENT.md` (Technical Director Agent)。
-* **Goal**：依據 `AGENT.md` 內的技術規範，產出標準化的 8s 影片 Prompt。
+* **Goal**：依據 `AGENT.md` 內的技術規範，產出標準化的 15s 影片 Prompt。
 
 ## 4. Special Protocol: Anchor Frame Visualization (首尾關鍵幀模式)
 **[Trigger]**：當使用者提供一段文本/劇本，並明確要求「生成首尾圖」、「關鍵圖」或「Keyframes」時，**攔截**標準影片生成流程，改執行此協議。
