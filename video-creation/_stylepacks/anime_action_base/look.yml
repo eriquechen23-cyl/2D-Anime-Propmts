@@ -1,0 +1,26 @@
+### 3. 基礎風格包：`video-creation/_stylepacks/anime_action_base/look.yml`
+
+name: Anime Action Base Look
+# 視覺特徵
+line_weight: 1.0-1.5px (variable based on depth)
+shadow_type: hard_cel_shading (2-tone or 3-tone)
+color_palette:
+  saturation: high_vibrancy
+  black_level: crushed (pure black ink for outlines)
+# 漫畫化元素
+screen_tone:
+  density: 60lpi
+  opacity: 0.15 (shadow areas)
+speed_lines:
+  density: dynamic (action dependent)
+  color: white_or_accent
+onomatopoeia:
+  style: hand_drawn_brush
+  language: katakana
+# 渲染限制
+dof_quality: stylized_blur (no realistic bokeh circles)
+motion_blur: stylized_smear (2D deformation, no realistic blur)
+notes:
+  - 確保所有高光 (Specular) 呈現銳利的幾何形狀，而非暈開的光點。
+  - 陰影顏色通常偏冷色調 (藍/紫) 以增加畫面豐富度。
+  - 避免使用噪點 (Grain) 除非為了模擬舊電視動畫質感。
