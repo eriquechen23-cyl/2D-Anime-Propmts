@@ -6,25 +6,45 @@
 *   **Condition**: Dark, damp, flickering neon lights.
 
 Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantasy Action)
-「深夜；廢棄地下鐵站 (Abandoned Subway)；陰冷潮濕，遠處有哥布林 (Goblins) 的嘶吼聲。
-主角：**Kanzawa Retsu (鋼川 烈)** (24歲，帥氣男性，黑色緊身戰鬥衣，紅色紋路微光)。
+「深夜；廢棄地下鐵站。
+主角：**Kanzawa Retsu** (黑色緊身戰鬥衣，紅色紋路)。
 動作 (Act & Beat)：
-- **Act 1 (Setup)**: Retsu 從陰影中走出，神情輕鬆，手中把玩著一張發著紅光的卡牌 (Glowing Red Card)。
-- **Act 2 (Action)**: 鏡頭推近 (Push In)，Retsu 眼神一凝，手腕甩動。
-- **Act 3 (Climax)**: **[Single Motion]** Retsu 擲出卡牌 (Card Throw)。卡牌在空中劃出一道紅色軌跡 (Red Trail)，飛向畫面深處的黑暗。
-畫面風格：MAPPA Animation Style，粗獷線條 (Rough Lines)，高反差賽璐珞 (High Contrast Cel Shading)。
-空間佈局：[Fore: Retsu's Hand/Card] -> [Mid: Retsu's Body] -> [Back: Dark Tunnel]。
-鏡頭語言：Low Angle Dolly In -> Focus on Hand -> Follow Card (Z-Axis movement)。
-光影設定：背後有冷藍色環境光，卡牌發出強烈紅光照亮 Retsu 的側臉。
-作畫技術：Smear Frames on the throwing arm.
-物理細節：卡牌帶有紅色電流 (Red Sparks)，空氣中有塵埃漂浮。」
+
+**Act 1 (0.0s - 3.0s): Setup / Anticipation**
+*   **Intent**: 展示 Retsu 的游刃有餘與敵人的威脅。
+*   **Beat 1 (0-1.5s)**:
+    *   **Action**: Retsu 手指夾著一張發紅光的卡牌，在指間靈活轉動 (Card Twirl)，嘴角帶著自信的壞笑。
+    *   **Camera**: Extreme Close-up on fingers & card -> Rack focus to Retsu's eyes.
+    *   **Layout**: [Fore: Glowing Card] -> [Mid: Retsu's Face] -> [Back: Blurred Tunnel].
+    *   **Lighting**: 卡牌紅光照亮臉部細節 (Rim Light)。
+*   **Beat 2 (1.5-3.0s)**:
+    *   **Action**: 遠處黑暗中，一隻武裝哥布林 (Armored Goblin) 嘶吼，雙眼發出黃光。
+    *   **Camera**: Quick Whip Pan to the dark tunnel depth.
+    *   **FX**: 音波特效 (Visualized Roar).
+
+**Act 2 (3.0s - 6.0s): The Motion / Impact**
+*   **Intent**: 第一擊的爆發。
+*   **Beat 3 (3.0-6.0s)**:
+    *   **Action**: Retsu 眼神一凜，手腕猛烈甩動，擲出卡牌。
+    *   **Camera**: Dynamic Follow Cam (跟隨卡牌視角)。鏡頭從 Retsu 背後快速拉近，跟著卡牌飛出。
+    *   **Layout**: [Fore: Retsu's Shoulder] -> [Mid: Flying Card trail] -> [Back: Goblin].
+    *   **FX**: 紅色電流軌跡 (Red Lightning Trail)，速度線 (Speed Lines)。
+
+**Act 3 (6.0s - 8.0s): Follow Through / Resolution**
+*   **Intent**: 建立卡牌即將命中的懸念。
+*   **Beat 4 (6.0-8.0s)**:
+    *   **Action**: 卡牌在空中高速旋轉，逼近哥布林的面門。
+    *   **Camera**: POV Shot (Card's perspective) rushing towards the enemy.
+    *   **Layout**: [Fore: Card Edge] -> [Mid: Air distortion] -> [Back: Terrified Goblin Face].
+    *   **Lighting**: 紅光映照在哥布林驚恐的瞳孔中。
+」
 
 ---
 
 ## Visual Anchors (Runway/Luma)
 
 ### 1. Head Frame (0.0s)
-> **Prompt**: Anime style screenshot, Kanzawa Retsu standing in a dark abandoned subway tunnel, holding a glowing red card near his face, smirk, cool pose, black techwear with red neon lines, atmospheric lighting, volumetric fog, MAPPA style, 8k.
+> **Prompt**: Anime style screenshot, extreme close-up, Kanzawa Retsu holding a glowing red card between fingers, smirk, dark subway background, volumetric lighting, high contrast, MAPPA style, 8k.
 
-### 2. Tail Frame (End)
-> **Prompt**: Anime style screenshot, close up of Retsu's hand throwing a card, motion blur on the arm, the red card is flying towards the camera (foreshortening), red energy trail, dynamic angle, high contrast, anime cel shading.
+### 2. Tail Frame (8.0s)
+> **Prompt**: Anime style screenshot, dynamic POV shot, a glowing red card flying towards the camera (enemy pov), motion blur, red energy trail, background is a terrified goblin face in the dark, intense action scene.

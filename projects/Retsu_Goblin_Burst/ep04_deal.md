@@ -2,29 +2,46 @@
 
 **[State: Previous - Ep03]**
 *   **Ending Time**: 00:24
-*   **Last Scene**: Cards planted. Retsu landed.
-*   **Camera**: Wide shot / Over the shoulder.
+*   **Last Scene**: Trap set. Retsu landed.
+*   **Camera**: Wide Shot.
 
 Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantasy Action)
 「承接上集；廢棄地下鐵站。
 主角：**Kanzawa Retsu**。
 動作 (Act & Beat)：
-- **Act 1 (Trigger)**: Retsu 背對哥布林，輕輕打了一個響指 (Snap fingers) 或握拳。
-- **Act 2 (Action)**: **[Single Motion]** **連鎖爆破 (Chain Explosion)**。釘在哥布林身上的卡牌同時引爆。
-- **Act 3 (Aftermath)**: 巨大的紅色火球吞沒敵人。Retsu 頭也不回，爆炸的風壓吹起他的頭髮和衣擺。
-畫面風格：MAPPA Animation Style，極致的爆炸特效 (Sakuga Explosion)。
-空間佈局：[Fore: Retsu (Back view)] -> [Mid: Massive Explosion] -> [Back: Smoke]。
-鏡頭語言：Static Camera on Retsu -> Shake violently when explosion happens (Camera Shake).
-光影設定：爆炸的強光將 Retsu 剪影化 (Silhouette)，邊緣泛著金紅色的光暈 (Rim Light)。
-作畫技術：Liquid Fire (液態火焰)，Debris (碎片) 四散。
-物理細節：衝擊波 (Shockwave) 擴散，地面的積水被震起。」
+
+**Act 1 (0.0s - 3.0s): Setup / Anticipation**
+*   **Intent**: 處刑宣告。
+*   **Beat 1 (0-1.5s)**:
+    *   **Action**: Retsu 背對著哥布林，緩緩站直，舉起右手，拇指與中指準備打響指 (Snap gesture)。
+    *   **Camera**: Medium Shot from side. Focus on hand.
+    *   **Lighting**: 背景的紅光閃爍頻率達到極限 (Critical Mass)。
+*   **Beat 2 (1.5-3.0s)**:
+    *   **Action**: 哥布林察覺不對，試圖掙扎。
+    *   **Camera**: Quick cut to Goblin's panicked face.
+
+**Act 2 (3.0s - 6.0s): The Motion / Impact**
+*   **Intent**: 毀滅性的視覺衝擊。
+*   **Beat 3 (3.0-6.0s)**:
+    *   **Action**: Retsu 打下響指 (Snap)。"Bang."
+    *   **Camera**: Instant Cut to Wide Shot.
+    *   **FX**: **連鎖爆破 (Chain Explosion)**。所有卡牌同時引爆，巨大的紅色火球吞沒哥布林與周圍空間。
+    *   **Layout**: [Fore: Retsu Silhouette] -> [Mid: Explosion] -> [Back: Shockwave].
+
+**Act 3 (6.0s - 8.0s): Follow Through / Resolution**
+*   **Intent**: 帥氣離場 (Cool guys don't look at explosions)。
+*   **Beat 4 (6.0-8.0s)**:
+    *   **Action**: 爆炸的衝擊波吹起 Retsu 的頭髮與衣擺。他頭也不回，邁步走向鏡頭。
+    *   **Camera**: Dolly Out (拉遠)，保持 Retsu 在前景剪影。
+    *   **Lighting**: 強烈的背光 (Backlight) 將 Retsu 勾勒出金紅色的輪廓。
+」
 
 ---
 
 ## Visual Anchors (Runway/Luma)
 
 ### 1. Head Frame (0.0s)
-> **Prompt**: Anime style screenshot, Kanzawa Retsu standing with back to camera, hand raised to snap fingers, background shows the Goblin covered in glowing cards, tense atmosphere, high contrast, MAPPA style.
+> **Prompt**: Anime style screenshot, Kanzawa Retsu standing with back to enemy, right hand raised ready to snap fingers, background is dark with intensely blinking red lights on the floor and walls, tension, MAPPA style.
 
-### 2. Tail Frame (End)
-> **Prompt**: Anime style screenshot, massive red explosion filling the background, Kanzawa Retsu in silhouette in the foreground, cool pose, debris flying, volumetric smoke and fire, cinematic lighting, anime art.
+### 2. Tail Frame (8.0s)
+> **Prompt**: Anime style screenshot, massive cinematic explosion filling the background with red fire and smoke, Kanzawa Retsu walking away towards the camera in silhouette, debris flying, high contrast, cool guys don't look at explosions trope.

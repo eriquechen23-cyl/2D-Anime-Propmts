@@ -2,29 +2,46 @@
 
 **[State: Previous - Ep01]**
 *   **Ending Time**: 00:08
-*   **Last Scene**: Retsu just threw a card.
-*   **Camera**: Dynamic Action View.
+*   **Last Scene**: Card flying at Goblin.
+*   **Camera**: POV Impact.
 
 Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantasy Action)
 「承接上集；廢棄地下鐵站。
-主角：**Kanzawa Retsu**。敵人：**Armored Goblin (武裝哥布林)**。
+主角：**Kanzawa Retsu**。敵人：**Armored Goblin**。
 動作 (Act & Beat)：
-- **Act 1 (Reaction)**: 黑暗中一隻巨大的哥布林揮舞生鏽鐵管衝出 (Lunge)，打斷了卡牌的飛行軌跡。
-- **Act 2 (Action)**: **[Single Motion]** Retsu 進行 **極限閃避 (Perfect Dodge)**。他向後下腰 (Matrix lean) 或側身滑步，鐵管擦過他的鼻尖。
-- **Act 3 (Result)**: Retsu 穩住重心，眼神鎖定敵人，嘴角上揚。
-畫面風格：MAPPA Animation Style，速度線 (Speed Lines) 強調衝擊感。
-空間佈局：[Fore: Goblin's Weapon (Blurred)] -> [Mid: Retsu Dodging] -> [Back: Tunnel Walls]。
-鏡頭語言：Slow Motion at the dodge moment (Bullet Time effect) -> Speed up as he lands.
-光影設定：鐵管擦出的火花 (Sparks) 瞬間照亮 Retsu 的眼睛。
-作畫技術：Impact Frame (黑白閃爍) 當武器揮空時。
-物理細節：Retsu 的衣擺隨風劇烈飄動。」
+
+**Act 1 (0.0s - 3.0s): Setup / Anticipation**
+*   **Intent**: 敵人反擊與危機感。
+*   **Beat 1 (0-1.5s)**:
+    *   **Action**: 哥布林揮舞巨大的生鏽鐵管 (Rusty Pipe)，將飛來的卡牌打飛 (Deflect)。火花四濺。
+    *   **Camera**: Side view impact shot.
+    *   **FX**: Sparks explosion.
+*   **Beat 2 (1.5-3.0s)**:
+    *   **Action**: 哥布林藉著揮擊的慣性，向 Retsu 猛撲過來 (Lunge)，鐵管砸向地面。
+    *   **Camera**: Low angle looking up at Goblin.
+
+**Act 2 (3.0s - 6.0s): The Motion / Impact**
+*   **Intent**: 極限閃避的帥氣瞬間。
+*   **Beat 3 (3.0-6.0s)**:
+    *   **Action**: Retsu 進行 **Matrix Dodge** (向後下腰)。鐵管擦著他的鼻尖砸在地面，碎石飛濺。
+    *   **Camera**: Slow Motion (Bullet Time) rotating around Retsu.
+    *   **Layout**: [Fore: Pipe smashing ground] -> [Mid: Retsu bending back] -> [Back: Sparks].
+    *   **Lighting**: 鐵管擊中地面的火花瞬間照亮 Retsu 的臉。
+
+**Act 3 (6.0s - 8.0s): Follow Through / Resolution**
+*   **Intent**: 重整態勢，準備反擊。
+*   **Beat 4 (6.0-8.0s)**:
+    *   **Action**: Retsu 單手撐地，利用反作用力向後滑行 (Back Slide)，拉開距離。
+    *   **Camera**: Tracking shot following Retsu sliding back.
+    *   **Layout**: [Fore: Ground debris] -> [Mid: Retsu sliding] -> [Back: Goblin recovering].
+」
 
 ---
 
 ## Visual Anchors (Runway/Luma)
 
 ### 1. Head Frame (0.0s)
-> **Prompt**: Anime style screenshot, Kanzawa Retsu recovering from a throwing pose, a large Armored Goblin shadow lunging from the darkness with a rusty pipe, tension, dynamic composition, depth of field, MAPPA style.
+> **Prompt**: Anime style screenshot, Armored Goblin swinging a rusty pipe, deflecting a red glowing card, sparks flying, aggressive pose, dark subway tunnel, action shot.
 
-### 2. Tail Frame (End)
-> **Prompt**: Anime style screenshot, Kanzawa Retsu in a low crouching pose or leaning back (dodging), a metal pipe blurring past his face, sparks flying, intense expression, high contrast lighting, action freeze frame.
+### 2. Tail Frame (8.0s)
+> **Prompt**: Anime style screenshot, Kanzawa Retsu sliding backwards on the ground, one hand touching the floor, dust rising, looking forward intensely, distance created between him and the enemy, dynamic perspective.

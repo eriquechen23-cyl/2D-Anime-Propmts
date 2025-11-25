@@ -62,39 +62,32 @@
 3.  **Camera Shake (手持感)**：
     -   模擬 `Handheld Camera` 或 `Rough Shake`，增加臨場混亂感 (MAPPA Style)。
 
-## 6. Advanced Narrative Schema (Act-Beat-Angle)
-為確保高精度的影片生成，Prompt 必須包含以下三層結構資訊。
+## 6. Advanced Narrative Schema (Act-Beat-Angle) [UPDATED]
+**[FLOW Extension Mode]** 為確保 8 秒影片的高精度生成，必須採用嚴格的「三幕式分鏡」結構。
 
-### [Level 1] Act {n} (敘事單元)
-定義時間段落與整體氛圍。
-* **Template**: `Act {n}（{t0–t1}s）`
-* **Fields**:
-    * `意圖`：{建立/敘事/情感/轉折/收束}
-    * `視角策略`：{TPS (越肩) / Obari (大張透視) / POV / Bird's Eye} **(新增欄位)**
-    * `美術要點`：{JJK Style/墨繪/暗黑/高對比}
+### 6.1 The 8-Second Structure (8秒結構律)
+所有 Clip 必須強制符合以下時間軸分配，嚴禁動作過載：
+* **Act 1 (0.0s - 3.0s): Setup / Anticipation (預備/蓄力)**
+    * 重點：建立狀態、鎖定目標、動作起始。
+* **Act 2 (3.0s - 6.0s): The Motion / Impact (核心動作/衝突)**
+    * 重點：揮刀、開槍、碰撞、光束發射。這是畫面張力最強的時刻。
+* **Act 3 (6.0s - 8.0s): Follow Through / Resolution (殘心/收尾)**
+    * 重點：動作慣性、煙霧擴散、姿勢定格。此處必須與「Tail Frame」完美接合。
 
-### [Level 2] Beat {k} (動作節拍)
-定義具體的表演與技術執行。
-* **Template**: `Beat {k}（{t0–t1}s）`
-* **Fields**:
-    * `重點`：{情節/行為/情緒變化}
-    * `Layout (分鏡佈局)`：
-        * **必須明確定義前/中/後景**，例如：`[Fore: Weapon] -> [Mid: Hero] -> [Back: Ruins]`。
-        * 若使用分鏡，標註 `Split Screen (Top/Bottom)`。
-    * `Camera (運鏡技術)`：
-        * 關鍵字：`Over-the-shoulder`, `Dolly Out`, `Push In`, `Dutch Angle`, `Foreshortening (透視變形)`.
-    * `FX / Manga`：
-        * **新增欄位**：專門描述漫畫特效。
-        * 內容：`Screen Tone Overlay`, `Visualized Katakana SFX`, `Speed Lines`.
-    * `光影`：{背光/輪廓光/體積光/眼神光}
-    * `物理/質感`：{Ink Fluid (水墨流體) / Matte Painting (啞光)}
+### 6.2 Detailed Breakdown Fields (詳細欄位)
+在撰寫 Prompt 時，每個 Act 必須包含以下詳細參數：
 
-### [Level 3] Angle {a} (構圖規格)
-* **Template**: `Angle {a}`
-* **Fields**:
-    * `構圖`：{三分線/中央/Z軸縱深/引導線}
-    * `內容`：{特寫/越肩/敵人主觀/腳部特寫}
-    * `安全`：{去Logo/去可讀字}
+* **Act {n} ({Time Range}) [{Name}]**
+    * `意圖 (Intent)`: 這一卡要表達的核心戲劇目的。
+    * `Beat {k} ({Time})`:
+        * **Action (表演)**: 角色具體的肢體動作 (Pose & Movement)。
+        * **Camera (運鏡)**: 
+            * *Type*: {Orbit / Dolly / Pan / Static / Crash Zoom}
+            * *Lens*: {Wide / Telephoto / Fisheye}
+            * *Angle*: {Low / High / Dutch / Eye-level}
+        * **Layout (構圖)**: 強制定義三層景深 `[Fore] -> [Mid] -> [Back]`。
+        * **FX (特效)**: {Speed Lines / Impact Frames / Particles / Glow}。
+        * **Lighting (光影)**: 該瞬間的光源變化。
 
 ## 7. Sequential Flow Protocol (State Machine / 狀態機協議)
 **[Context]** 此協議用於製作長度超過 8s 的連續短片 (16s/24s)，確保 Ep(N) 與 Ep(N-1) 之間的劇情與視覺連貫性。
@@ -169,4 +162,56 @@ Prompt 頂部必須包含以下 Context Block：
 > ```
 
 ### 8.3 Auto-Correction (自動修正)
-* 若文案中動作過於密集（例如：一句話包含「他跳起來、空中轉身、開槍、落地、再衝刺」），**強制拆分**為兩個 Prompt，不要硬塞進 8秒內。
+* **Overload Check**: 若文案過長（例如：包含複雜對話或場景大幅度轉換），應主動切分為 `Ep N (Part 1)` 與 `Ep N (Part 2)`。
+* **Anchor Rule**: 切分後的每一集（即使是 Part 1）都必須生成獨立的 `Head Frame` 與 `Tail Frame`，確保每一段 8 秒影片都能獨立定錨。
+
+## 9. Visual Anchor Protocol (影像定錨協議) [NEW]
+**[Core Rule]** 每一集 Prompt 僅服務於「一張首圖 (Head)」到「一張尾圖 (Tail)」的演變。
+
+### 9.1 Action Sequence Density (動作序列密度)
+* **多動作允許 (Multi-Action Allowed)**：8 秒內 **允許** 包含多個分鏡 (Cuts) 與連貫動作序列 (Action Sequence)。
+    * *Example*: 「Act 1: 敵人揮刀 (Cut 1) -> Act 2: 主角閃避並反擊 (Cut 2) -> Act 3: 落地殘心 (Cut 3)」是完全合法的。
+* **節奏限制 (Pacing Limit)**：
+    * 每個分鏡 (Cut) 建議保留至少 **1.5s - 2.0s** 的表演時間，避免畫面閃爍過快導致 AI 崩壞。
+    * 若動作過多導致單鏡頭時間低於 1秒，則必須拆分為上下集。
+
+### 9.2 Anchor Definition (定錨定義)
+在 Master Prompt 之後，必須輸出兩組 Image Prompt 供生成底圖：
+
+1.  **Head Frame (0.0s)**
+    * **定義**：影片起始畫面。
+    * **內容**：必須與上一集的 Tail Frame 視覺完全一致 (連戲)。
+    * **功能**：作為 Luma/Runway 的 `Start Image`。
+
+2.  **Tail Frame (8.0s)**
+    * **定義**：影片結束畫面。
+    * **內容**：Act 3 動作結束後的靜止狀態 (Final State)。
+    * **功能**：作為 Luma/Runway 的 `End Image`，並成為下一集的參考。
+
+---
+
+## Output Template Example (輸出範本)
+
+# Video Prompt: {Slug}
+
+**[State: Previous Ep Output]**
+...
+
+Master(8s...)
+「...
+動作 (Act & Beat)：
+Act 1 (0.0-3.0s) [Setup: The Stance]
+- Beat 1:
+    - Action: ...
+    - Camera: ...
+    - Layout: [Fore] -> [Mid] -> [Back]
+...
+」
+
+## Visual Anchors (For Image Generation)
+
+### 1. Head Frame (Start)
+> **Prompt**: ...
+
+### 2. Tail Frame (End)
+> **Prompt**: ...
