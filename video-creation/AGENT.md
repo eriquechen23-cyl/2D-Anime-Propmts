@@ -21,7 +21,7 @@
 
 ## 2. Output Template (全自動輸出模板) **[STRICT ENFORCEMENT]**
 
-**[指令]** 當使用者提供劇情時，請將其拆解為數個 8s 片段 (Clips)，並針對 **每一集** 嚴格套用以下格式。
+**[指令]** 當使用者提供劇情時，請將其拆解為數個 15s 片段 (Clips)，並針對 **每一集** 嚴格套用以下格式。
 **[禁止]** 嚴禁省略「畫面風格」、「空間佈局」等底部技術區塊。每一集都必須是完整的。
 **[新增要求]** 產出的 Prompt 檔案末尾必須附帶 **QA Scoring Block**（六維度評分矩陣），讓生成軟體可依分數迭代。
 
@@ -36,14 +36,14 @@
 * **Last Scene**: {上一集的結尾畫面 (Tail Frame) 描述}
 * **Context**: {本集劇情摘要}
 
-Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantasy Action)
+Master(15s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantasy Action)
 「{時間}，{地點}；{環境氛圍描述 (如：Dusty, Sparks flying, Tense)}。
 主角：**{角色名}** ({外觀特徵 keyword}, Anime Style)，穿著 {服裝}。
 動作 (Act & Beat)：
 
-**Act 1 (0.0s - 3.0s): Setup / Anticipation (預備/蓄力)**
+**Act 1 (0.0s - 5.0s，可微調): Setup / Anticipation (預備/蓄力)**
 * **Intent**: {本段落的戲劇目的}
-* **Beats (強制高頻：本區段建議 2-3 幕)**:
+* **Beats (強制高頻：本區段建議 3-4 幕，可依節奏增減)**:
     * **Beat 1.1**:
         * **Duration**: {如 0.0s-1.0s}
         * **Action**: {微觀動作描寫}
@@ -52,22 +52,22 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
     * **Beat 1.2**: ...
     * **Beat 1.3**: ...
 
-**Act 2 (3.0s - 6.0s): The Motion / Impact (衝突/核心動作)**
+**Act 2 (5.0s - 10.0s，可微調): The Motion / Impact (衝突/核心動作)**
 * **Intent**: {本段落的視覺衝擊點}
-* **Beats (強制高頻：本區段建議 3-4 幕)**:
+* **Beats (強制高頻：本區段建議 4-6 幕，可依節奏增減)**:
     * **Beat 2.1**:
-        * **Duration**: {如 3.0s-4.0s}
+        * **Duration**: {如 5.0s-6.0s}
         * **Action**: {關鍵攻擊/打擊特寫}
         * **FX**: {2D 特效描述}
         * **Camera**: {動態運鏡}
     * **Beat 2.2**: ...
     * **Beat 2.3**: ...
 
-**Act 3 (6.0s - 8.0s): Follow Through / Resolution (殘心/收尾)**
+**Act 3 (10.0s - 15.0s，可微調): Follow Through / Resolution (殘心/收尾)**
 * **Intent**: {動作結束後的餘韻或懸念}
-* **Beats (強制高頻：本區段建議 1-2 幕)**:
+* **Beats (強制高頻：本區段建議 2-3 幕，可依節奏增減)**:
     * **Beat 3.1**:
-        * **Duration**: {如 6.0s-7.0s}
+        * **Duration**: {如 10.0s-11.0s}
         * **Action**: {落地/回頭/表情特寫}
         * **Environment**: {環境變化}
     * **Beat 3.2**: ...
@@ -77,8 +77,8 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 | --- | --- | --- | --- |
 | Style (風格) | 30% | {分數} | Cel Shading / Rough Lines / Manga Aesthetics 是否到位？ |
 | Camera (運鏡) | 25% | {分數} | 是否使用 Z 軸縱深、Obari 透視，避免平面橫捲？ |
-| Structure (結構) | 20% | {分數} | 三幕節奏是否成立？是否符合 Sakuga Density (7-10 Beats)？ |
-| Continuity & Timing (連戲/節奏) | 15% | {分數} | **是否拆解為微觀特寫？總幕數 >= 7？** |
+| Structure (結構) | 20% | {分數} | 三幕節奏是否成立？是否符合 Sakuga Density (12-18 Beats)？ |
+| Continuity & Timing (連戲/節奏) | 15% | {分數} | **是否拆解為微觀特寫？總幕數 >= 12？** |
 | Character (人設) | 15% | {分數} | 角色外觀、服裝、特徵與角色檔一致？ |
 | FX/Physics (特效/物理) | 10% | {分數} | 使用 Liquid/Ink 2D 特效、避免寫實粒子？ |
 > **總分 (加權)**: {自評加權總分}/100 — 若 <85 必須重寫修正。
@@ -106,7 +106,7 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 ### 1. Head Frame (0.0s)
 > **Prompt**: {詳細描述影片**第一幀**畫面。包含：角色姿勢、表情、視角、光影、MAPPA Style tags。必須與上一集結尾連戲。}
 
-### 2. Tail Frame (8.0s)
+### 2. Tail Frame (15.0s)
 > **Prompt**: {詳細描述影片**最後一幀**畫面。包含：動作後的結果、殘留特效、背景破壞狀況。此圖將作為下一集的參考。}
 
 ### [Template End]
@@ -116,14 +116,14 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 ## 3. Narrative & Pacing Logic (敘事邏輯)
 為了確保上述模板的品質，執行時請遵守：
 
-1.  **The 8-Second Rule & Editing Protocol (剪輯協議)** [UPDATED]:
+1.  **The 15-Second Rule & Editing Protocol (剪輯協議)** [UPDATED]:
     * **No One-Shot Constraint (非一鏡到底)**：嚴禁為了連貫而犧牲節奏，鼓勵 Hard Cuts、Jump Cuts、Montage，拒絕物理上強求的連續運鏡。
-    * **Maximize Beat Density (BEAT 最大化)**：每 8 秒影片至少 7-10 幕，優先提高分鏡密度以堆疊資訊量。
+    * **Maximize Beat Density (BEAT 最大化)**：每 15 秒影片至少 12-18 幕，優先提高分鏡密度以堆疊資訊量。
     * **Multi-Angle Coverage**：同一動作需嘗試「特寫 -> 廣角 -> 破壞細節 -> 反應」的快速切換，形成多角度節奏波動。
     * **Micro-Narrative (微觀敘事)**：必須將單一動作 (Action) 拆解為連續的微特寫 (Micro-cuts) 以營造速度感。
         * *Bad*: "Retsu jumps up." (1 Shot)
         * *Good*: "[Close-up] Foot crushes ground" -> "[Back View] Muscles tense" -> "[Low Angle] Motion blur launch" (3 Shots).
-    * **No Long Takes**: 嚴禁使用超過 2 秒的靜止或單一運鏡長鏡頭，除非為了特殊的張力暫停 (Tension Pause)。
+    * **No Long Takes**: 嚴禁使用超過 3 秒的靜止或單一運鏡長鏡頭，除非為了特殊的張力暫停 (Tension Pause)。
 
 2.  **Visual Consistency**:
     * **Damage Retention**: 衣服破了就是破了，下一集必須繼承。
@@ -136,7 +136,7 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 
 ## 4. Batch Processing Protocol (批量處理協議)
 當使用者輸入長篇劇本時：
-1.  **Segment**: 自動將劇本切分為 Ep1, Ep2, Ep3... (每集 8 秒)。
+1.  **Segment**: 自動將劇本切分為 Ep1, Ep2, Ep3... (每集 15 秒，Act 時間分配允許 Agent 自主微調)。
 2.  **Generate**: 對每一集**重複調用**上述 [Template Start] 到 [Template End] 的完整內容。
 3.  **No "Ibid"**: 絕對不要寫「同上」、「風格如前所述」。每一集都必須是獨立可執行的完整 Prompt。
 
@@ -151,7 +151,7 @@ Master(8s｜Jujutsu Kaisen Style / MAPPA Aesthetics｜16:9｜24fps｜Dark Fantas
 | **1. Style (風格)** | **30%** | 必須包含 `Cel Shading`, `Rough Lines`, `Manga Aesthetics`。 | 出現 `Photorealistic` (-30分/重寫) |
 | **2. Camera (運鏡)** | **25%** | 具備 Z 軸縱深 (Foreshortening) 或 Obari Perspective。 | 平面視角 (-25分/重寫) |
 | **3. Structure (結構)** | **20%** | 遵守 `Act 1 -> Act 2 -> Act 3`。 | 結構混亂 (-10分) |
-| **4. Continuity & Timing (連戲/節奏)** | **15%** | **Sakuga Protocol**: 總幕數 (Beats) 必須在 **7-10 幕**之間。使用微特寫銜接。 | **節奏拖沓、幕數 < 7 (-15分/重寫)** |
+| **4. Continuity & Timing (連戲/節奏)** | **15%** | **Sakuga Protocol**: 總幕數 (Beats) 必須在 **12-18 幕**之間，並可依情節需求在各 Act 之間自由調整。使用微特寫銜接。 | **節奏拖沓、幕數 < 12 (-15分/重寫)** |
 | **5. Character (人設)** | **15%** | 角色特徵 (Glowing Lines/Outfit) 與 `character_profiles.md` 一致。 | 角色特徵錯誤 (-15分) |
 | **6. FX/Physics (物理)** | **10%** | 使用 `Liquid/Ink` 描述特效，而非寫實粒子。 | 描述過於物理真實 (-10分) |
 
