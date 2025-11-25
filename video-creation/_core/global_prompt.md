@@ -11,8 +11,11 @@ Master({Duration}s｜2D Anime / Cel Shaded｜16:9｜24fps｜{Style_Primary})
 主角：{角色名稱} ({User_Avatar_Description}，動漫化風格，帥氣男性)，穿著 {服裝}。
 動作 (Act & Beat)：{動作描述，請依照 Act 1 (Setup) -> Act 2 (Conflict) -> Act 3 (Climax) 結構撰寫，並標記 Beat}。
 畫面風格：日系 2D 動畫，{描邊粗細}px 輪廓線，高對比賽璐珞上色。
-鏡頭語言 (Angle & Continuity)：{運鏡序列描述，包含 Sequence Logic 與 Match Cut}，保留 2D 平面構成感...
-漫畫特效：{高潮段落} 疊加網點 (Screen Tone) 與速度線，擬聲字 "{Sound_FX}" 出現。
+空間佈局 (Spatial Layout)：
+- 多層景深 (Deep Depth of Field)：區分 [Foreground: 模糊前景/特效] -> [Midground: 交戰] -> [Background: 透視延伸]。
+- 體積感 (Volume)：角色與怪物具備 3D 體積感 (Three-quarter view/Extreme Angle)，避免平面貼圖感。
+鏡頭語言 (Angle & Continuity)：{運鏡序列描述，包含 Sequence Logic 與 Match Cut}，強調 Z 軸縱深與透視變形 (Foreshortening)...
+漫畫特效：{高潮段落} 疊加網點 (Screen Tone) 與放射狀速度線 (Converging Speed Lines)，擬聲字 "{Sound_FX}" 出現。
 光影設定：主光 {Color} 硬邊陰影 (Hard Shadow)，邊緣光 (Rim Light) {Color} 勾勒輪廓。
 作畫技術 (Animation Tech)：
 - 動態：{Smear Frames / Impact Frames / Limited Animation}

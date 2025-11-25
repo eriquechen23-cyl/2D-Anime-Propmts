@@ -9,6 +9,8 @@
 ## 1. Anime x PBR Rendering Rules (渲染執行規則)
 為了達成「偽 3D」或「純 2D」效果，請遵守以下優先級：
 
+> **Core Principle**: "Allow strict 3D perspective geometry (vanishing points, foreshortening) but render it with strict 2D aesthetics (flat colors, outlines). The action must feel like it occupies a deep 3D space, not a 2D stage."
+
 1.  **[MUST] Line & Flat (線條與色塊)**
     -   所有角色與前景物件必須有 **描邊 (Outlines)** (0.8px - 1.5px)。
     -   上色強制使用 **色塊分層 (Base/Shadow/Highlight)**，禁止使用平滑漸層 (Gradient)。
@@ -28,10 +30,14 @@
 | **FX / Magic** | `3D Toon Layer` | 魔法陣、爆炸煙霧 (需標註 Toon Render) |
 | **Background** | `2D Painted Background` | 手繪背景美術 (Hand-painted Anime Background), 水彩質感, 高細節靜態圖 (High-detail static art), 景深模糊 (Bokeh) |
 
-## 3. Camera & Motion (運鏡與連貫性)
--   **焦段**：鎖定 24mm / 35mm / 50mm / 85mm。
--   **基本運鏡**：以 **平移 (Truck/Dolly)** 為主，模擬傳統動畫攝影台 (Multi-plane Camera) 效果。
--   **禁止**：360 度繞拍 (Orbit)、極端魚眼、不自然的 Z 軸穿梭。
+## 3. Camera & Motion (運鏡與空間構成)
+-   **核心邏輯**：**「2D 渲染 + 3D 構圖」**。畫面材質必須是平面的，但空間幾何必須有深度。
+-   **透視誇張 (Foreshortening)**：**[MUST]** 在動作鏡頭中，強制使用「廣角透視變形」。
+    *   關鍵字：`Foreshortening`, `Dynamic Perspective`, `Fish-eye lens effect` (用於手腳/武器逼近鏡頭時)。
+    *   *修正邏輯：讓靠近鏡頭的拳頭/武器變得極大，遠處的身體變小，創造強烈縱深。*
+-   **Z 軸運動 (Z-Axis Action)**：允許角色從「背景衝向鏡頭」或「將敵人擊飛至遠景」。
+    *   使用：`Push in`, `Pull out`, `Dolly Zoom`, `Character rushing towards camera`.
+-   **禁止**：平淡的「橫移 (Trucking)」打鬥。禁止純側面的「皮影戲」構圖。
 -   **Angle Continuity (連貫性標準)**：
     * **Sequence Logic**：必須以「鏡頭序列」思考，而非單一畫面。
     * **Match Cut**：在角色瞬移或高速動作時，強制使用 `Match Cut` 關鍵字，確保動作連貫。
@@ -74,8 +80,9 @@
     * `重點`：{情節/行為/情緒變化}
     * `Blocking (走位)`：{入畫/停位/互動/道具接觸}
     * `Camera (運鏡技術)`：
-        * 運鏡：{滑軌/側移/繞拍 (2D Parallax)/手持 (Shake)/穩定器}
-        * 焦段/機位：{24–35/50–75/100–135mm｜眼高/胸高/膝高/俯拍}
+        * 運鏡：{滑軌/側移/繞拍 (2D Parallax)/手持 (Shake)/穩定器/Z軸衝刺 (Push in/Pull out)}
+        * 構圖關鍵字：{Obari Pose (大張一刀流)/Dutch Angle (荷蘭式傾斜)/Action Lines converging (放射狀速度線)}
+        * 焦段/機位：{廣角透視 (Fish-eye/Wide)/24–35/50–75/100–135mm｜眼高/胸高/膝高/俯拍}
         * 對焦：{全焦 (Deep Focus)/層次拉焦 (Rack Focus) - *動漫僅用模糊色塊表現散景*}
         * 快門角 (Shutter/Motion)：{180 (標準)/144–172 (動作)/200–240 (夢幻)}；拍點：{關鍵動作/視線交換}
     * `光影`：{光型/色溫/對比/眼神光 (Eye Highlight)}
