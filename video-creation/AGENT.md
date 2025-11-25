@@ -40,10 +40,11 @@
     * 預設戰鬥視角。鏡頭位於角色 **右後方或左後方**。
     * **關鍵邏輯**：角色看向「畫面深處 (Z-Axis)」，攻擊指向「消失點」。
     * Layout: `[Foreground: Character Shoulder/Weapon] -> [Background: Enemy]`
--   **[STANDARD] Reverse Shot (Frontal / Enemy POV)**：
-    * 展現壓迫感的正面鏡頭。鏡頭代表「敵人」或「被攻擊的目標」。
-    * **關鍵邏輯**：角色看向「鏡頭」，武器/拳頭指向「觀眾」。
-    * Motion: 必須搭配 `Dolly Out` (後退) 或 `Tracking Back`，營造角色逼近的感覺。
+-   **[STANDARD] Obari Perspective (Dynamic 3/4 View)**：
+    *   取代呆板的正面鏡頭。使用 **「低角 + 45度側視 + 廣角透視」**。
+    *   **關鍵邏輯**：武器形成強烈對角線，槍口/劍尖極大 (Foreshortening)，角色位於畫面一側。
+    *   **禁止**：越軸 (Crossing the 180° Line)、純正面槍口特寫 (Barrel View)。
+    *   Layout: `[Fore: Huge Weapon Muzzle] -> [Mid: Hero Face (Side)] -> [Back: Diagonal Speed Lines]`
 -   **[TECH] Dynamic Split-Screen (動態分鏡)**：
     * 在同一時間點展示「宏觀動作」與「微觀表情」。
     * Keyword: `Split Screen Composition`, `Manga Panel Layout`.
@@ -69,7 +70,7 @@
 * **Template**: `Act {n}（{t0–t1}s）`
 * **Fields**:
     * `意圖`：{建立/敘事/情感/轉折/收束}
-    * `視角策略`：{TPS (越肩) / Reverse (正面) / POV / Bird's Eye} **(新增欄位)**
+    * `視角策略`：{TPS (越肩) / Obari (大張透視) / POV / Bird's Eye} **(新增欄位)**
     * `美術要點`：{JJK Style/墨繪/暗黑/高對比}
 
 ### [Level 2] Beat {k} (動作節拍)
