@@ -28,59 +28,42 @@
 -   **Prompt 關鍵字注入**：
     > `Subject: [User's Name/Avatar], handsome anime male, stylized features, clean linework, sharp jawline, anime protagonist vibes`
 
-## 3. Workflow Routing (工作流導向)
-你是專案的總調度官，請依據使用者的**指令意圖**，選擇合適的 Agent 進行處理：
+## 3. Workflow Routing (工作流導向與首尾關鍵幀模式)
+你是專案的總調度官，請依據使用者的**指令意圖**選擇合適的 Agent 並直接展開對應輸出。
 
 ### 3.1 劇本與敘事模式 (Narrative Mode)
-* **Trigger (觸發條件)**：
-    * 使用者要求「寫劇本」、「戰鬥模擬」、「小說描寫」。
-    * 使用者僅提供模糊概念（如：「想看烈打爆一群人」）。
-    * 使用者覺得現有劇本不夠帥，要求「潤飾」或「加強描寫」。
-* **Action**：調用 `script/AGENT.md` (Narrative Agent)。
-* **Goal**：產出文字優美、畫面感強烈的戰鬥小說。
+- **Trigger (觸發條件)**：
+  - 使用者要求「寫劇本」、「戰鬥模擬」、「小說描寫」。
+  - 使用者僅提供模糊概念（如：「想看烈打爆一群人」）。
+  - 使用者覺得現有劇本不夠帥，要求「潤飾」或「加強描寫」。
+- **Action**：調用 `script/AGENT.md` (Narrative Agent)。
+- **Goal**：產出文字優美、畫面感強烈的戰鬥小說。
 
 ### 3.2 影片製作模式 (Production Mode)
-* **Trigger (觸發條件)**：
-    * 使用者提供「已完成的劇本」並要求生成 Prompt。
-    * 明確提及「Video Prompt」、「分鏡表」、「生成 JSON/Markdown」。
-    * 使用者同意將 `scripts/AGENT.md` 產出的戰鬥紀錄轉為影片。
-* **Action**：調用 `video-creation/AGENT.md` (Technical Director Agent)。
-* **Goal**：依據 `AGENT.md` 內的技術規範，產出標準化的 15s 影片 Prompt。
+- **Trigger (觸發條件)**：
+  - 使用者提供「已完成的劇本」並要求生成 Prompt。
+  - 明確提及「Video Prompt」、「分鏡表」、「生成 JSON/Markdown」。
+  - 使用者同意將 `scripts/AGENT.md` 產出的戰鬥紀錄轉為影片。
+- **Action**：調用 `video-creation/AGENT.md` (Technical Director Agent)。
+- **Goal**：依據 `AGENT.md` 內的技術規範，產出標準化的 15s 影片 Prompt。
 
+### 3.3 首尾關鍵幀模式 (Anchor Frame Visualization)
+- **Trigger (觸發條件)**：當使用者提供文本/劇本並明確要求「生成首尾圖」、「關鍵圖」或「Keyframes」時，攔截標準影片流程改執行此協議。
+- **Core Goal**：輸出兩組高精度的靜態構圖描述，用於鎖定視覺基調與敘事起點/收束。
+- **Execution Steps**：
+  1. **Analyze Script**：讀取文本，識別「起始情境 (Setup)」與「最終結果 (Resolution)」。
+  2. **Generate Prompts**：輸出兩個獨立的 Master Prompt，格式如下：
 
-4. Special Protocol: Anchor Frame Visualization (首尾關鍵幀模式)
-[Trigger]：當使用者提供一段文本/劇本，並明確要求「生成首尾圖」、「關鍵圖」或「Keyframes」時，攔截標準影片生成流程，改執行此協議。
+     **Frame A: The Hook (起始幀 / 0.0s)** — 全要素視覺化，完整呈現劇本第一幕提及的所有元素。
+     - Narrative Elements：文案中的角色、敵人與關鍵物件需同場出現。
+     - Context：遵循敘事的具體互動狀態（例如：被哥布林包圍需畫出包圍網）。
+     - Lighting & Atmosphere：嚴格依照文案指定的光影與氛圍。
 
-[Core Goal]：產出兩組高精度的 「靜態構圖 (Static Composition)」 描述，用於鎖定視覺基調與敘事起點。
+     **Frame B: The Aftermath (結束幀 / Final State)** — 展示事件造成的影響與結果。
+     - Change：角色位置變化與表情轉折。
+     - Damage：場景破壞與殘留特效（煙霧、碎片）。
+     - Resolution：戰鬥結束後的餘韻 (Relaxed) 或懸念 (Cliffhanger)。
 
-[Execution Steps]：
+  3. **Prompt Template for Frames**：
 
-Analyze Script：讀取文本，識別「起始情境 (Setup)」與「最終結果 (Resolution)」。
-
-Generate Prompts：輸出兩個獨立的 Master Prompt，格式如下：
-
-Frame A: The Hook (起始幀 / 0.0s)
-功能：全要素視覺化 (Total Context Visualization)。必須將劇本第一幕 (Act 1) 提及的所有元素完整呈現。
-
-重點：
-
-Narrative Elements: 文案中提及的所有角色（主角與敵人）、關鍵物件（如武器、標記）必須同時在場。
-
-Context: 依照文案描述的「具體互動狀態」構圖（例如：若文案是「被哥布林包圍」，不能只畫主角站著，必須畫出包圍網）。
-
-Lighting & Atmosphere: 嚴格執行文案指定的光影氛圍（如：正午硬光、廢墟藍光）。
-
-Frame B: The Aftermath (結束幀 / Final State)
-功能：展示事件造成的影響與結果。
-
-重點：
-
-Change: 角色位置的變化、表情的轉折。
-
-Damage: 場景破壞、殘留特效 (煙霧/碎片)。
-
-Resolution: 戰鬥結束後的餘韻 (Relaxed) 或 懸念 (Cliffhanger)。
-
-[Prompt Template for Frames] 請使用簡化版的 Master Template，移除時間流動描述，強調畫面定格：
-
-Master(Still Image｜Jujutsu Kaisen Style｜16:9｜High Detail) 「{Time/Location}。{Frame A or B Context - 包含劇本提及之全要素}。 Layout: [Fore] -> [Mid] -> [Back] (必須強調景深與各元素相對位置)。 Subject: {Character} in {Specific Pose relating to the scene}. Enemies/Objects: {劇本提及的敵人或物件狀態}。 FX: {Static FX, e.g., Floating Particles, Glowing Eyes, Tension Lines}. Lighting: {Lighting Setup}. Style: MAPPA Aesthetics, Cel Shading.」
+     `Master(Still Image｜Jujutsu Kaisen Style｜16:9｜High Detail)「{Time/Location}。{Frame A or B Context - 包含劇本提及之全要素}。Layout: [Fore] -> [Mid] -> [Back] (必須強調景深與各元素相對位置)。 Subject: {Character} in {Specific Pose relating to the scene}. Enemies/Objects: {劇本提及的敵人或物件狀態}。 FX: {Static FX, e.g., Floating Particles, Glowing Eyes, Tension Lines}. Lighting: {Lighting Setup}. Style: MAPPA Aesthetics, Cel Shading.」`
